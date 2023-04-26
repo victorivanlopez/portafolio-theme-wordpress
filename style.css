@@ -10,12 +10,15 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: portafolio
 */
 
-@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@400;500;700&family=Source+Sans+Pro:wght@400;700&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@400;500;700&family=Source+Sans+Pro:wght@400;700&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Poppins:wght@400;500;700&display=swap');
 
 :root {
     /* FUENTES */
-    --fuente-principal: 'Source Sans Pro', sans-serif;
-    --fuente-headings:  'Dosis', sans-serif;
+    /* --fuente-principal: 'Source Sans Pro', sans-serif;
+    --fuente-headings:  'Dosis', sans-serif; */
+    --fuente-principal: 'Poppins', sans-serif;
+    --fuente-headings:  'Open Sans', sans-serif;
 
     /* COLORES */
     --primario:     #38B6FF;
@@ -36,16 +39,16 @@ html {
 
 body {
     font-family: var(--fuente-principal);
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     line-height: 2;
 }
 /* HEADINGS */
 h1, h2, h3 {
     font-family: var(--fuente-headings);
     margin: 0;
-    line-height: 1.5;
     letter-spacing: .2rem;
     text-transform: uppercase;
+    text-align: center;
 }
 h1 {
     font-size: 3.5rem;
@@ -75,6 +78,9 @@ img {
     max-width: 100%;
     height: auto;
 }
+hr {
+    border: 1px solid var(--gris-claro);
+}
 .contenedor {
     width: min(95%, 105rem);
     margin: 0 auto;
@@ -95,15 +101,15 @@ img {
 }
 
 /* HEADER */
-
 @media (min-width: 1460px) {
     .header {
         position: fixed;
+        width: 20rem;
         left: 0;
         top: 0;
         bottom: 0;
         overflow: hidden;
-        width: 20rem;
+        background-color: var(--blanco);
         box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
         z-index: 1000;
     }
@@ -114,6 +120,14 @@ img {
     align-items: center;
     justify-content: space-evenly;
     height: 100%;
+}
+.logo {
+    display: none;
+}
+@media (min-width: 1460px) {
+    .logo {
+        display: block;
+    }
 }
 .logo .foto {
     width: 17rem;
@@ -126,7 +140,7 @@ img {
 }
 .logo .nombre {
     margin-top: 1rem;
-    font-size: 2rem;
+    font-size: 1.8rem;
     text-align: center;
     color: var(--gris-oscuro);
     text-transform: uppercase;
@@ -143,7 +157,37 @@ img {
     color: var(--gris-oscuro);
     text-transform: uppercase;
     transition: color .3s;
+    font-size: 1.8rem;
 }
 .menu-principal a:hover {
     color: var(--primario);
+}
+.main-content {
+    margin-left: 20rem;
+}
+
+/* FOOTER */
+.footer-content {
+    padding: 2rem;
+}
+.footer-content .copyright {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+}
+/* HERO */
+.hero {
+    min-height: 60rem;
+    background-image: linear-gradient(
+        rgb(0 0 0 / .80),
+        rgb(0 0 0 / .80)
+    ), url(assets/images/hero.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+@media (min-width: 768px) {
+    .hero {
+        height: 100vh;
+    }
 }

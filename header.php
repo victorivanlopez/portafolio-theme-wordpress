@@ -8,7 +8,7 @@
     <?php wp_head(); ?>
 </head>
 <body>
-    <header class="header contenedor">
+    <header class="header">
         <div class="navegacion">
             <div class="logo">
                 <a href="<?php echo get_home_url(); ?>">
@@ -32,4 +32,6 @@
 
             </div>
         </div>
+
+        <div class="main-content">
     </header>
