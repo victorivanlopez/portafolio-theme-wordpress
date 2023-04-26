@@ -10,3 +10,86 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: portafolio
 */
 
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@400;500;700&family=Source+Sans+Pro:wght@400;700&display=swap');
+
+:root {
+    /* FUENTES */
+    --fuente-principal: 'Source Sans Pro', sans-serif;
+    --fuente-headings:  'Dosis', sans-serif;
+
+    /* COLORES */
+    --primario:     #38B6FF;
+    --gris-oscuro:  #575655;
+    --gris-claro:   #EBEBEB;
+    --blanco:       #FFFFFF;
+    --negro:        #000000;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; /* 10px = 1rem */
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: var(--fuente-principal);
+    font-size: 1.8rem;
+    line-height: 2;
+}
+/* HEADINGS */
+h1, h2, h3 {
+    font-family: var(--fuente-headings);
+    margin: 0;
+    line-height: 1.5;
+    letter-spacing: .2rem;
+    text-transform: uppercase;
+}
+h1 {
+    font-size: 3.5rem;
+}
+h2 {
+    font-size: 2.8rem;
+    
+}
+h3 {
+    font-size: 2rem;
+}
+
+/* GLOBALES */
+p {
+    margin: 0;
+}
+a {
+    text-decoration: none;
+}
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+.contenedor {
+    width: min(95%, 120rem);
+    margin: 0 auto;
+}
+
+/* UTILIDADES */
+.text-center {
+    text-align: center;
+}
+.texto-primario {
+    color: var(--primario);
+}
+.texto-blanco {
+    color: var(--blanco);
+}
+.seccion {
+    padding: 5rem 0;
+}
