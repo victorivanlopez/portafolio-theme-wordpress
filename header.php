@@ -8,12 +8,15 @@
     <?php wp_head(); ?>
 </head>
 <body>
-    <header class="header">
-        <div class="barra-navegacion">
+    <header class="header contenedor">
+        <div class="navegacion">
             <div class="logo">
                 <a href="<?php echo get_home_url(); ?>">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.png" alt="Logotipo Víctor Iván López">
+                    <div class="foto">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/foto.png" alt="Fotografia">
+                    </div>
                 </a>
+                <p class="nombre">Víctor Iván López</p>
             </div>
 
             <?php
@@ -24,5 +27,9 @@
                 );
                 wp_nav_menu($args);
             ?>
+
+            <div class="redes">
+
+            </div>
         </div>
     </header>

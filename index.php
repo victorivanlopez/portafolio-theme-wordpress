@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-    <main>
+    <main class="main contenedor seccion">
         <?php
             // Loop
             while( have_posts() ) : the_post();
