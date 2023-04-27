@@ -1,6 +1,7 @@
 
 document.addEventListener('DOMContentLoaded', () => {
     sectionScroll();
+    menuBurger();
 });
 
 function sectionScroll() {
@@ -17,5 +18,13 @@ function sectionScroll() {
                 navLinks[index].classList.add('active');
             };
         });
+    });
+};
+
+function menuBurger() {
+    const hamburger = document.querySelector('.hamburguer-menu svg');
+    hamburger.addEventListener('click', () => {
+        const menuMovil = document.querySelector('#menuMovil');
+        menuMovil.classList.toggle('mostrar-menu');
     });
 }
