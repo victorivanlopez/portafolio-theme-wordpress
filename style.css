@@ -158,8 +158,11 @@ hr {
 .menu-principal a:hover {
     color: var(--primario);
 }
+.menu-principal li:first-of-type a {
+    color: var(--primario);
+}
 .menu-principal a.active {
-    color: red;
+    color: var(--primario);
 }
 .main-content {
     margin-left: 25rem;
