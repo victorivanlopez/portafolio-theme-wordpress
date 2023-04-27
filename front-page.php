@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-        <section class="hero">
+        <section id="inicio" class="hero">
             
         </section>
 
