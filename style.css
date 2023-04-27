@@ -180,10 +180,6 @@ hr {
 /* HERO */
 .hero {
     min-height: 65rem;
-    background-image: linear-gradient(
-        rgb(0 0 0 / .80),
-        rgb(0 0 0 / .80)
-    ), url(assets/images/hero.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;

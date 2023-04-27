@@ -17,3 +17,33 @@ function mi_portafolio_scripts_styles() {
     wp_enqueue_script('scripts', get_template_directory_uri() . '/assets/js/scripts.js', array(), '1.0.0', true);
 };
 add_action('wp_enqueue_scripts', 'mi_portafolio_scripts_styles');
+
+// Imagenes dinámicas como background
+function mi_portafolio_hero_imagen() {
+    // Obtener ID  de la página
+    $page = get_page_by_title('Inicio');
+    $page_id = $page->ID;
+    // Obtener la imagen
+    $id_imagen = get_field('imagen_fondo', $page_id);
+    // Ruta de la imágen
+    if($id_imagen) { // Se valida que exista una imagen
+        $imagen = wp_get_attachment_image_src($id_imagen, 'full')[0];
+        // Crear CSS
+        wp_register_style('custom', false);
+        // Hoja de estilo "virtual"
+        wp_enqueue_style('custom');
+		    
+		// CSS
+        $imagen_destacada_css = "
+            section.hero {
+                background-image: linear-gradient(
+                    rgb(0 0 0 / .75),
+                    rgb(0 0 0 / .75)
+                ), url($imagen);
+            }
+        ";
+        // Inyectar CSS
+        wp_add_inline_style('custom', $imagen_destacada_css);
+    };
+};
+add_action('init', 'mi_portafolio_hero_imagen');
