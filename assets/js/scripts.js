@@ -2,6 +2,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     sectionScroll();
     menuBurger();
+    typedHeading();
 });
 
 function sectionScroll() {
@@ -27,4 +28,20 @@ function menuBurger() {
         const menuMovil = document.querySelector('#menuMovil');
         menuMovil.classList.toggle('mostrar-menu');
     });
-}
+};
+
+function typedHeading() {
+    const element = document.querySelector('#element');
+
+    if(element) {
+        const typed = new Typed('#element', {
+            strings: [
+                'Front-end'
+            ],
+            typeSpeed: 100,
+            backSpeed: 30,
+            backDelay: 3000,
+            loop: true
+          });
+    };
+};

@@ -2,7 +2,7 @@
         <section id="inicio" class="hero">
             <div class="hero-content">
                 <p>Hola. Mi nombre es Víctor Iván López González</p>
-                <h1>Desarrollador Web <span>Front-End</span></h1>
+                <h1>Desarrollador Web <span id="element"></span></h1>
             </div>
         </section>
 

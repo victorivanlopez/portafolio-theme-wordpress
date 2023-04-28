@@ -103,7 +103,7 @@ hr {
 }
 
 /* HEADER */
-@media (min-width: 1460px) {
+@media (min-width: 993px) {
     .header {
         position: fixed;
         width: 25rem;
@@ -121,7 +121,7 @@ hr {
     justify-content: space-between;
     padding: 1rem 2rem;
 }
-@media (min-width: 768px) {
+@media (min-width: 993px) {
     .navegacion {
         padding: 0;
         flex-direction: column;
@@ -133,7 +133,7 @@ hr {
 .foto {
     display: none;
 }
-@media (min-width: 1460px) {
+@media (min-width: 993px) {
     .foto {
         display: block;
     }
@@ -150,7 +150,7 @@ hr {
     color: var(--gris-oscuro);
     text-transform: uppercase;
 }
-@media (min-width: 768px) {
+@media (min-width: 993px) {
     .logo .nombre {
         margin-top: 1rem;
         font-size: 1.8rem;
@@ -160,7 +160,7 @@ hr {
 .hamburguer-menu:hover svg {
     cursor: pointer;
 }
-@media (min-width: 768px) {
+@media (min-width: 993px) {
     .hamburguer-menu {
         display: none;
     }
@@ -168,7 +168,7 @@ hr {
 .contenedor-menu {
     display: none;
 }
-@media (min-width: 768px) {
+@media (min-width: 993px) {
     .contenedor-menu {
         display: block;
     }
@@ -198,7 +198,7 @@ hr {
 .navegacion .redes-menu {
     display: none;
 }
-@media (min-width: 768px) {
+@media (min-width: 993px) {
     .navegacion .redes-menu {
         display: flex;
         gap: 1rem;
@@ -212,7 +212,7 @@ hr {
     display: inline-block;
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 3rem;
+    background-size: 2.5rem;
 }
 .redes-menu .red-enlace[href*="linkedin.com"]::before {
     background-image: url(assets/images/linkedin.svg);
@@ -244,7 +244,7 @@ hr {
     max-height: 35rem;
     padding: 1rem 0 .5rem 0;
 }
-@media (min-width: 768px) {
+@media (min-width: 993px) {
     .navegacion-movil {
         display: none;
     }
@@ -259,7 +259,7 @@ hr {
     border-top: 1px solid var(--gris-claro);
 }
 
-@media (min-width: 1460px) {
+@media (min-width: 993px) {
     .main-content {
         background-color: var(--blanco);
         margin-left: 25rem;

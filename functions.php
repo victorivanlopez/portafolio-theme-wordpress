@@ -14,6 +14,9 @@ function mi_portafolio_scripts_styles() {
     wp_enqueue_style('style', get_stylesheet_uri(), array('normalize'), '1.0.0');
 
     // SCRIPTS
+    if(is_front_page()) {
+        wp_enqueue_script('typedjs', 'https://unpkg.com/typed.js@2.0.15/dist/typed.umd.js', array(), '2.0.15', true);
+    };
     wp_enqueue_script('scripts', get_template_directory_uri() . '/assets/js/scripts.js', array(), '1.0.0', true);
 };
 add_action('wp_enqueue_scripts', 'mi_portafolio_scripts_styles');
