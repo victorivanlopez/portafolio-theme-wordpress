@@ -282,12 +282,12 @@ hr {
     background-size: cover;
     display: flex;
     align-items: center;
+    position: relative;
 }
 @media (min-width: 768px) {
     .hero {
         height: 100vh;
         justify-content: center;
-        
     }
 }
 .hero-content {
@@ -321,3 +321,18 @@ hr {
     gap: 2rem;
     margin-top: 2rem;
 }
+.hero i {
+    display: none;
+}
+@media (min-width: 768px) {
+    .hero i {
+        display: block;
+        color: var(--primario);
+        font-size: 2.5rem;
+        position: absolute;
+        inset: auto 50% 0 50%;
+        padding-bottom: 1.5rem;
+    }
+}
+
+

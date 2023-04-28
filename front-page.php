@@ -7,6 +7,9 @@
                     <a class="boton boton-primary" href="#">Ver Portafolio</a>
                 </div>
             </div>
+            <a href="#sobre-mi">
+                <i class="fa-sharp fa-solid fa-arrow-down fa-bounce"></i>
+            </a>
         </section>
 
         <section id="sobre-mi" class="sobre-mi contenedor seccion">
