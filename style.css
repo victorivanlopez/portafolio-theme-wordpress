@@ -101,6 +101,23 @@ hr {
 .seccion {
     padding: 5rem 0;
 }
+.boton {
+    padding: 1rem 3rem;
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 1rem;
+    margin: 1rem 0;
+}
+.boton-primary {
+    border: 1px solid var(--primario);
+    color: var(--primario);
+    transition: background-color .3s ease-out, color .3s ease-out;
+}
+.boton-primary:hover {
+    background-color: var(--primario);
+    color: var(--blanco);
+}
 
 /* HEADER */
 @media (min-width: 993px) {
@@ -144,7 +161,7 @@ hr {
     border-radius: 50%;
 }
 .logo .nombre {
-    font-size: 2rem;
+    font-size: 2.2rem;
     font-weight: 700;
     text-align: center;
     color: var(--gris-oscuro);
@@ -157,13 +174,13 @@ hr {
         font-weight: 400;
     }
 }
-.hamburguer-menu:hover svg {
-    cursor: pointer;
-}
 @media (min-width: 993px) {
     .hamburguer-menu {
         display: none;
     }
+}
+.hamburguer-menu:hover svg {
+    cursor: pointer;
 }
 .contenedor-menu {
     display: none;
@@ -198,37 +215,24 @@ hr {
 .navegacion .redes-menu {
     display: none;
 }
-@media (min-width: 993px) {
+@media (min-width: 768px) {
     .navegacion .redes-menu {
         display: flex;
-        gap: 1rem;
     }
 }
-.redes-menu .red-enlace::before {
-    content: '';
-    /* padding: 2rem; */
-    width: 4rem;
-    height: 4rem;
-    display: inline-block;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 2.5rem;
+.redes-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
 }
-.redes-menu .red-enlace[href*="linkedin.com"]::before {
-    background-image: url(assets/images/linkedin.svg);
+.redes-menu i {
+    font-size: 2.5rem;
+    color: var(--gris-oscuro);
+    transition: color .3s ease-out;
 }
-.redes-menu .red-enlace[href*="github.com"]::before {
-    background-image: url(assets/images/github.svg);
-}
-.redes-menu .red-nombre {
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    border: 0;
-    display: block;
+.redes-menu i:hover {
+    color: var(--primario);
 }
 
 .navegacion-movil {
@@ -241,8 +245,8 @@ hr {
 }
 .mostrar-menu {
     opacity: 1;
-    max-height: 35rem;
-    padding: 1rem 0 .5rem 0;
+    max-height: 40rem;
+    padding: 2rem 0;
 }
 @media (min-width: 993px) {
     .navegacion-movil {
@@ -250,15 +254,10 @@ hr {
     }
 }
 .navegacion-movil .redes-menu {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
+    padding-top: 2rem;
     margin-top: 1rem;
-    padding-top: 1rem;
     border-top: 1px solid var(--gris-claro);
 }
-
 @media (min-width: 993px) {
     .main-content {
         background-color: var(--blanco);
@@ -316,4 +315,9 @@ hr {
     .hero-content p {
         font-size: 1.8rem;
     }
+}
+.hero-action {
+    display: flex;
+    gap: 2rem;
+    margin-top: 2rem;
 }

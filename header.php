@@ -41,11 +41,11 @@
 
            
             <nav class="redes-menu">
-                <a class="red-enlace" href="https://mx.linkedin.com/" target="_blank">
-                    <span class="red-nombre">LinkedIn</span>
+                <a href="https://mx.linkedin.com/" target="_blank">
+                    <i class="fa-brands fa-linkedin"></i>
                 </a>
-                <a class="red-enlace" href="https://github.com/" target="_blank">
-                    <span class="red-nombre">GitHub</span>
+                <a href="https://github.com/" target="_blank">
+                    <i class="fa-brands fa-github"></i>
                 </a>
             </nav>
             
@@ -62,11 +62,11 @@
         ?>
 
         <nav class="redes-menu">
-            <a class="red-enlace" href="https://mx.linkedin.com/" target="_blank">
-                <span class="red-nombre">LinkedIn</span>
+            <a href="https://mx.linkedin.com/" target="_blank">
+                <i class="fa-brands fa-linkedin"></i>
             </a>
-            <a class="red-enlace" href="https://github.com/" target="_blank">
-                <span class="red-nombre">GitHub</span>
+            <a href="https://github.com/" target="_blank">
+                <i class="fa-brands fa-github"></i>
             </a>
         </nav>
     </div>
