@@ -365,7 +365,7 @@ button:hover {
     margin-top: 5rem;
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    gap: 3rem;
+    gap: 4rem;
 }
 @media (min-width: 768px) {
     .sobre-mi-content {
@@ -401,7 +401,6 @@ button:hover {
     color: var(--primario);
 }
 
-
 /* Esperiencia y Habilidades */
 .tabs {
     display: flex;
@@ -421,4 +420,57 @@ button:hover {
 .tabs button.actual {
     background-color: var(--primario);
     color: var(--blanco);
+}
+.experiencias,
+.habilidades {
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 3rem;
+}
+@media (min-width: 768px) {
+    .experiencias,
+    .habilidades {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.experiencia,
+.habilidad {
+    padding: 3rem;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+    border-radius: 2rem;
+}
+.experiencia .periodo {
+    margin-bottom: 1rem;
+    color: var(--primario);
+    font-weight: 700;
+    font-size: 1.4rem;
+}
+.experiencia .empresa {
+    margin: 1rem 0;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.habilidad {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+@media (min-width: 768px) {
+    .habilidad {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+.habilidad i {
+    font-size: 6rem;
+    color: var(--primario);
+}
+.habilidad .nombre {
+    margin: 0;
 }

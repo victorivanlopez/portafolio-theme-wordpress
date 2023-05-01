@@ -18,7 +18,7 @@
 
             <div class="sobre-mi-content">
                 <div class="resumen">
-                    <h3>Hola. Soy <span>Víctor Iván López</span></h3>
+                    <h3>Hola. Soy <span>Víctor Iván López</span> Desarrollador Web</h3>
                     <p>Me gradué de la carrera de Ingeniería en Telemática en la Universidad de Colima en el año 2017. Al inicio de mi carrera laboral, me dediqué a temas relacionados con la tecnología, las redes y la comunicación de datos. Siempre he sentido una gran pasión por la programación web, y he fortalecido mis conocimientos de manera autodidacta en programación y diseño web.
                     <p>Actualmente, disfruto trabajar en el desarrollo de páginas web para emprendedores que buscan mejorar su negocio y ofrecer sus servicios o productos de manera más profesional a sus clientes.</p>
 
@@ -40,7 +40,7 @@
                             <p><span>Edad:</span> 28 Años</p>
                         </li>
                         <li>
-                            <p><span>Pais:</span> México</p>
+                            <p><span>País:</span> México</p>
                         </li>
                     </ul>
                 </div>
@@ -53,6 +53,55 @@
              <div class="tabs">
                 <button class="actual boton" type="button" data-paso="1">Experiencia</button>
                 <button class="boton" type="button" data-paso="2">Habilidades</button>
+            </div>
+
+            <div id="paso-1" class="experiencias">
+                <div class="experiencia">
+                    <p class="periodo">2018-2020</p>
+                    <h3 class="nombre">Coorninador de Informática</h3>
+                    <p class="empresa">ASIPONA</p>
+                    <p class="descripcion">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis autem minima velit quibusdam vero.</p>
+                </div>
+
+                <div class="experiencia">
+                    <p class="periodo">2018-2020</p>
+                    <h3 class="nombre">Coorninador de Informática</h3>
+                    <p class="empresa">ASIPONA</p>
+                    <p class="descripcion">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis autem minima velit quibusdam vero.</p>
+                </div>
+
+                <div class="experiencia">
+                    <p class="periodo">2018-2020</p>
+                    <h3 class="nombre">Coorninador de Informática</h3>
+                    <p class="empresa">ASIPONA</p>
+                    <p class="descripcion">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis autem minima velit quibusdam vero.</p>
+                </div>
+
+                <div class="experiencia">
+                    <p class="periodo">2018-2020</p>
+                    <h3 class="nombre">Coorninador de Informática</h3>
+                    <p class="empresa">ASIPONA</p>
+                    <p class="descripcion">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis autem minima velit quibusdam vero.</p>
+                </div>
+            </div>
+
+            <div id="paso-2" class="habilidades">
+                <div class="habilidad">
+                    <i class="fa-brands fa-figma"></i>
+                    <h3 class="nombre">Maquetación y Diseño</h3>
+                </div>
+                <div class="habilidad">
+                    <i class="fa-brands fa-react"></i>
+                    <h3 class="nombre">Desarrollo con React</h3>
+                </div>
+                <div class="habilidad">
+                    <i class="fa-solid fa-database"></i>
+                    <h3 class="nombre">Manejo de Bases de Datos</h3>
+                </div>
+                <div class="habilidad">
+                    <i class="fa-solid fa-code-branch"></i>
+                    <h3 class="nombre">Uso de Git y GitHub</h3>
+                </div>
             </div>
         </section>
  <?php get_footer(); ?>
