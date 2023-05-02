@@ -104,4 +104,48 @@
                 </div>
             </div>
         </section>
+
+        <section class="portafolio contenedor seccion">
+            <h2>Portafolio</h2>
+            <p class="seccion-descripcion">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+
+            <div class="proyectos">
+                <div class="proyecto">
+                        <div class="proyecto-imagen">
+                            <a href="#">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/proyecto2.jpg" alt="Proyecto">
+                            </a>           
+                        </div>
+
+                        <div class="proyecto-content">
+                            <p>Página Web</p>
+                            <h3>OdontologoMZ</h3>
+                        </div>
+                </div>
+                <div class="proyecto">
+                        <div class="proyecto-imagen">
+                            <a href="#">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/proyecto3.jpg" alt="Proyecto">
+                            </a>           
+                        </div>
+
+                        <div class="proyecto-content">
+                            <p>Página Web</p>
+                            <h3>Inmobiliaria Jardines</h3>
+                        </div>
+                </div>
+                <div class="proyecto">
+                        <div class="proyecto-imagen">
+                            <a href="#">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/proyecto1.png" alt="Proyecto">
+                            </a>           
+                        </div>
+
+                        <div class="proyecto-content">
+                            <p>Tienda Virtual</p>
+                            <h3>Yasaily</h3>
+                        </div>
+                </div>
+            </div>
+        </section>
  <?php get_footer(); ?>

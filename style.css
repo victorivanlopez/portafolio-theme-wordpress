@@ -136,6 +136,7 @@ button:hover {
 }
 .seccion-descripcion {
     text-align: center;
+    margin-bottom: 5rem;
 }
 
 /* HEADER */
@@ -280,7 +281,7 @@ button:hover {
 }
 @media (min-width: 993px) {
     .main-content {
-        background-color: var(--blanco);
+        /* background-color: var(--blanco); */
         margin-left: 25rem;
     }
 }
@@ -362,7 +363,6 @@ button:hover {
 
 /* SOBRE MI */
 .sobre-mi-content {
-    margin-top: 5rem;
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     gap: 4rem;
@@ -407,7 +407,6 @@ button:hover {
     justify-content: center;
     align-items: center;
     gap: 3rem;
-    margin-top: 5rem;
 }
 .tabs button {
     padding: 1rem 1.5rem;
@@ -473,4 +472,49 @@ button:hover {
 }
 .habilidad .nombre {
     margin: 0;
+}
+/* PORTAFOLIO */
+.proyectos {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 3rem;
+}
+@media (min-width: 768px) {
+    .proyectos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (min-width: 993px) {
+    .proyectos {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+.proyecto-imagen {
+    border-radius: 2rem;
+    overflow: hidden;
+    
+}
+.proyecto-imagen img {
+    width: 100%;
+    height: 25rem;
+    object-fit: cover;
+    transition: transform .3s ease-in-out;
+}
+.proyecto-imagen:hover img {
+    transform: scale(1.1);
+}
+.proyecto-content {
+    padding: 2rem;
+}
+.proyecto-content p,
+.proyecto-content h3 {
+    text-align: center;
+}
+.proyecto-content p {
+    color: var(--primario);
+    font-weight: 500;
+    font-size: 1.5rem;
+}
+.proyecto-content h3 {
+    margin: .5rem 0;
 }
