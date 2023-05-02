@@ -111,41 +111,95 @@
 
             <div class="proyectos">
                 <div class="proyecto">
-                        <div class="proyecto-imagen">
-                            <a href="#">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/proyecto2.jpg" alt="Proyecto">
-                            </a>           
-                        </div>
+                    <div class="proyecto-imagen">
+                        <a href="#">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/proyecto1.png" alt="Proyecto">
+                        </a>           
+                    </div>
 
-                        <div class="proyecto-content">
-                            <p>Página Web</p>
-                            <h3>OdontologoMZ</h3>
-                        </div>
+                    <div class="proyecto-content">
+                        <h3>MuebleWorld</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit sint quod aliquid.</p>
+                    </div>
+
+                    <div class="proyecto-footer">
+                        <ul class="tecnologias">
+                            <li class="tecnologia">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-sass.png" alt="Icono Técnologia">
+                            </li>
+                            <li class="tecnologia">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-js.png" alt="Icono Técnologia">
+                            </li>
+                            <li class="tecnologia">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-php.png" alt="Icono Técnologia">
+                            </li>
+                            <li class="tecnologia">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-mysql.png" alt="Icono Técnologia">
+                            </li>
+                        </ul>
+                    </div>
                 </div>
+
                 <div class="proyecto">
-                        <div class="proyecto-imagen">
-                            <a href="#">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/proyecto3.jpg" alt="Proyecto">
-                            </a>           
-                        </div>
+                    <div class="proyecto-imagen">
+                        <a href="#">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/proyecto2.png" alt="Proyecto">
+                        </a>           
+                    </div>
 
-                        <div class="proyecto-content">
-                            <p>Página Web</p>
-                            <h3>Inmobiliaria Jardines</h3>
-                        </div>
+                    <div class="proyecto-content">
+                        <h3>Meeti</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit sint quod aliquid.</p>
+                    </div>
+
+                    <div class="proyecto-footer">
+                        <ul class="tecnologias">
+                            <li class="tecnologia">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-mongodb.png" alt="Icono Técnologia">
+                            </li>
+                            <li class="tecnologia">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-express.png" alt="Icono Técnologia">
+                            </li>
+                            <li class="tecnologia">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-react.png" alt="Icono Técnologia">
+                            </li>
+                            <li class="tecnologia">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-nodejs.png" alt="Icono Técnologia">
+                            </li>
+                        </ul>
+                    </div>
                 </div>
+
                 <div class="proyecto">
-                        <div class="proyecto-imagen">
-                            <a href="#">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/proyecto1.png" alt="Proyecto">
-                            </a>           
-                        </div>
+                    <div class="proyecto-imagen">
+                        <a href="#">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/proyecto3.png" alt="Proyecto">
+                        </a>           
+                    </div>
 
-                        <div class="proyecto-content">
-                            <p>Tienda Virtual</p>
-                            <h3>Yasaily</h3>
-                        </div>
+                    <div class="proyecto-content">
+                        <h3>GuitarLA</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit sint quod aliquid.</p>
+                    </div>
+
+                    <div class="proyecto-footer">
+                        <ul class="tecnologias">
+                            <li class="tecnologia">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-mongodb.png" alt="Icono Técnologia">
+                            </li>
+                            <li class="tecnologia">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-express.png" alt="Icono Técnologia">
+                            </li>
+                            <li class="tecnologia">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-react.png" alt="Icono Técnologia">
+                            </li>
+                            <li class="tecnologia">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-nodejs.png" alt="Icono Técnologia">
+                            </li>
+                        </ul>
+                    </div>
                 </div>
+               
             </div>
         </section>
  <?php get_footer(); ?>

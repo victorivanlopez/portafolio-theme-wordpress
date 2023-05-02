@@ -477,20 +477,25 @@ button:hover {
 .proyectos {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    gap: 3rem;
+    gap: 4rem;
 }
-@media (min-width: 768px) {
+@media (min-width: 993px) {
     .proyectos {
         grid-template-columns: repeat(2, 1fr);
     }
 }
-@media (min-width: 993px) {
+@media (min-width: 1200px) {
     .proyectos {
         grid-template-columns: repeat(3, 1fr);
     }
 }
-.proyecto-imagen {
+.proyecto {
+    border: 1px solid var(--gris-claro);
     border-radius: 2rem;
+    border-top: 0;
+}
+.proyecto-imagen {
+    border-radius: 0 0 2rem 2rem;
     overflow: hidden;
     
 }
@@ -501,20 +506,27 @@ button:hover {
     transition: transform .3s ease-in-out;
 }
 .proyecto-imagen:hover img {
-    transform: scale(1.1);
+    transform: scale(1.2);
 }
 .proyecto-content {
-    padding: 2rem;
-}
-.proyecto-content p,
-.proyecto-content h3 {
-    text-align: center;
+    padding: 4rem;
 }
 .proyecto-content p {
-    color: var(--primario);
-    font-weight: 500;
     font-size: 1.5rem;
 }
-.proyecto-content h3 {
-    margin: .5rem 0;
+.proyecto-footer {
+    border-top: 2px solid var(--primario);
+    padding: 2rem;
+}
+.proyecto-footer .tecnologias,
+.proyecto-footer .tecnologia {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.proyecto-footer .tecnologias img {
+    width: 3rem;
+    height: 3rem;
 }
