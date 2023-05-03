@@ -105,101 +105,171 @@
             </div>
         </section>
 
-        <section class="portafolio contenedor seccion">
+        <main class="portafolio contenedor seccion">
             <h2>Portafolio</h2>
             <p class="seccion-descripcion">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
 
-            <div class="proyectos">
-                <div class="proyecto">
-                    <div class="proyecto-imagen">
+            <div class="listado-cards">
+                <div class="card">
+                    <div class="card-imagen">
                         <a href="#">
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/images/proyecto1.png" alt="Proyecto">
                         </a>           
                     </div>
 
-                    <div class="proyecto-content">
-                        <h3>MuebleWorld</h3>
+                    <div class="card-content">
+                        <h3><a href="#">MuebleWorld</a></h3>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit sint quod aliquid.</p>
                     </div>
 
-                    <div class="proyecto-footer">
-                        <ul class="tecnologias">
-                            <li class="tecnologia">
+                    <div class="card-footer">
+                        <ul class="listado-meta">
+                            <li class="meta">
                                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-sass.png" alt="Icono Técnologia">
                             </li>
-                            <li class="tecnologia">
+                            <li class="meta">
                                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-js.png" alt="Icono Técnologia">
                             </li>
-                            <li class="tecnologia">
+                            <li class="meta">
                                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-php.png" alt="Icono Técnologia">
                             </li>
-                            <li class="tecnologia">
+                            <li class="meta">
                                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-mysql.png" alt="Icono Técnologia">
                             </li>
                         </ul>
                     </div>
                 </div>
 
-                <div class="proyecto">
-                    <div class="proyecto-imagen">
+                <div class="card">
+                    <div class="card-imagen">
                         <a href="#">
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/images/proyecto2.png" alt="Proyecto">
                         </a>           
                     </div>
 
-                    <div class="proyecto-content">
-                        <h3>Meeti</h3>
+                    <div class="card-content">
+                        <h3><a href="#">Meeti</a></h3>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit sint quod aliquid.</p>
                     </div>
 
-                    <div class="proyecto-footer">
-                        <ul class="tecnologias">
-                            <li class="tecnologia">
+                    <div class="card-footer">
+                        <ul class="listado-meta">
+                            <li class="meta">
                                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-mongodb.png" alt="Icono Técnologia">
                             </li>
-                            <li class="tecnologia">
+                            <li class="meta">
                                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-express.png" alt="Icono Técnologia">
                             </li>
-                            <li class="tecnologia">
+                            <li class="meta">
                                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-react.png" alt="Icono Técnologia">
                             </li>
-                            <li class="tecnologia">
+                            <li class="meta">
                                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-nodejs.png" alt="Icono Técnologia">
                             </li>
                         </ul>
                     </div>
                 </div>
 
-                <div class="proyecto">
-                    <div class="proyecto-imagen">
+                <div class="card">
+                    <div class="card-imagen">
                         <a href="#">
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/images/proyecto3.png" alt="Proyecto">
                         </a>           
                     </div>
 
-                    <div class="proyecto-content">
-                        <h3>GuitarLA</h3>
+                    <div class="card-content">
+                        <h3><a href="#">GuitarLA</a></h3>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit sint quod aliquid.</p>
                     </div>
 
-                    <div class="proyecto-footer">
-                        <ul class="tecnologias">
-                            <li class="tecnologia">
+                    <div class="card-footer">
+                        <ul class="listado-meta">
+                            <li class="meta">
                                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-mongodb.png" alt="Icono Técnologia">
                             </li>
-                            <li class="tecnologia">
+                            <li class="meta">
                                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-express.png" alt="Icono Técnologia">
                             </li>
-                            <li class="tecnologia">
+                            <li class="meta">
                                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-react.png" alt="Icono Técnologia">
                             </li>
-                            <li class="tecnologia">
+                            <li class="meta">
                                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-nodejs.png" alt="Icono Técnologia">
                             </li>
                         </ul>
                     </div>
                 </div>
-               
+            </div>
+        </main>
+
+        <section class="blog contenedor seccion">
+            <h2>Blog</h2>
+            <p class="seccion-descripcion">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            
+            <div class="listado-cards">
+                <div class="card">
+                    <div class="card-imagen">
+                        <a href="#">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/entrada1.png" alt="Entrada">
+                        </a>           
+                    </div>
+
+                    <div class="card-content">
+                        <p class="categoria"><a href="#">Desarrollo Web</a></p>
+                        <h3><a href="#">Lo que debes saber sobre una tienda virtual</a></h3>
+                    </div>
+
+                    <div class="card-footer">
+                        <ul class="listado-meta">
+                            <li class="meta meta-blog">
+                                <i class="fa-solid fa-calendar-days"></i>
+                                <p>03 de Mayo de 2023</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-imagen">
+                        <a href="#">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/entrada2.png" alt="Entrada">
+                        </a>           
+                    </div>
+
+                    <div class="card-content">
+                        <p class="categoria"><a href="#">Desarrollo Web</a></p>
+                        <h3><a href="#">6 Ventajas de invertir en una pagina web</a></h3>
+                    </div>
+
+                    <div class="card-footer">
+                        <ul class="listado-meta">
+                            <li class="meta meta-blog">
+                                <i class="fa-solid fa-calendar-days"></i>
+                                <p>05 de Mayo de 2023</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-imagen">
+                        <a href="#">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/entrada3.png" alt="Entrada">
+                        </a>           
+                    </div>
+
+                    <div class="card-content">
+                        <p class="categoria"><a href="#">Desarrollo Web</a></p>
+                        <h3><a href="#">Beneficios al realizar un mantenimiento web</a></h3>
+                    </div>
+
+                    <div class="card-footer">
+                        <ul class="listado-meta">
+                            <li class="meta meta-blog">
+                                <i class="fa-solid fa-calendar-days"></i>
+                                <p>07 de Mayo de 2023</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </section>
  <?php get_footer(); ?>

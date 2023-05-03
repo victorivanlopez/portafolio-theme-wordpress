@@ -474,59 +474,91 @@ button:hover {
     margin: 0;
 }
 /* PORTAFOLIO */
-.proyectos {
+.listado-cards {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     gap: 4rem;
 }
 @media (min-width: 993px) {
-    .proyectos {
+    .listado-cards {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 @media (min-width: 1200px) {
-    .proyectos {
+    .listado-cards {
         grid-template-columns: repeat(3, 1fr);
     }
 }
-.proyecto {
+.card{
     border: 1px solid var(--gris-claro);
     border-radius: 2rem;
     border-top: 0;
 }
-.proyecto-imagen {
-    border-radius: 0 0 2rem 2rem;
-    overflow: hidden;
-    
+.card a {
+    color: var(--negro);
 }
-.proyecto-imagen img {
+.card-imagen {
+    overflow: hidden;
+}
+.card-imagen img {
     width: 100%;
     height: 25rem;
     object-fit: cover;
-    transition: transform .3s ease-in-out;
+    transition: transform 0.4s ease-in-out;
 }
-.proyecto-imagen:hover img {
+.card:hover .card-imagen img {
     transform: scale(1.2);
 }
-.proyecto-content {
-    padding: 4rem;
+.card-content {
+    padding: 3rem;
 }
-.proyecto-content p {
+.card-content h3 a {
+    display: inline;
+    background-image: linear-gradient(to right, var(--primario) 0%, var(--primario) 100%);
+    background-size: 0px 0.2rem;
+    background-position: 0px 95%;
+    background-repeat: no-repeat;
+    padding: 0.4rem 0;
+    transition: background-size 0.4s;
+}
+.card:hover .card-content h3 a {
+    background-size: 100% 0.2rem;
+}
+.card-content .categoria {
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+}
+.card-content p {
     font-size: 1.5rem;
 }
-.proyecto-footer {
-    border-top: 2px solid var(--primario);
-    padding: 2rem;
+.card-footer {
+    border-top: 1px solid var(--gris-claro);
+    padding: 1.5rem;
 }
-.proyecto-footer .tecnologias,
-.proyecto-footer .tecnologia {
+.card-footer .listado-meta,
+.card-footer .meta {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 2rem;
 }
+.card-footer .meta-blog {
+    gap: 1rem;
+}
 
-.proyecto-footer .tecnologias img {
+.card-footer .listado-meta img {
     width: 3rem;
     height: 3rem;
 }
+.card-footer .listado-meta p {
+    margin: 0;
+    font-size: 1.4rem;
+}
+.card-footer .listado-meta i {
+    font-size: 1.4rem;
+    transition: color 0.4s;
+}
+.card:hover .card-footer i {
+    color: var(--primario);
+}
+/* BLOG */
