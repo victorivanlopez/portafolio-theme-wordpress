@@ -18,10 +18,9 @@
 
             <div class="sobre-mi-content">
                 <div class="resumen">
-                    <h3>Hola. Soy <span>Víctor Iván López</span> Desarrollador Web</h3>
+                    <h3>Hola. Soy <span>Víctor Iván López</span></h3>
                     <p>Me gradué de la carrera de Ingeniería en Telemática en la Universidad de Colima en el año 2017. Al inicio de mi carrera laboral, me dediqué a temas relacionados con la tecnología, las redes y la comunicación de datos. Siempre he sentido una gran pasión por la programación web, y he fortalecido mis conocimientos de manera autodidacta en programación y diseño web.
                     <p>Actualmente, disfruto trabajar en el desarrollo de páginas web para emprendedores que buscan mejorar su negocio y ofrecer sus servicios o productos de manera más profesional a sus clientes.</p>
-
                 </div>
 
                 <div class="biografia">
@@ -31,10 +30,7 @@
                             <p><span>Nombre:</span> Víctor Iván López González</p>
                         </li>
                         <li>
-                            <p><span>Email:</span> <a href="mailto:victor_ivan2211@hotmail.com">victor_ivan2211@hotmail.com</a></p>
-                        </li>
-                        <li>
-                            <p><span>Teléfono:</span> <a href="tel:+3143767156">(314)3767-156</a></p>
+                            <p><span>Puesto:</span> Desarrollador Front-end</p>
                         </li>
                         <li>
                             <p><span>Edad:</span> 28 Años</p>
@@ -269,6 +265,62 @@
                             </li>
                         </ul>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="contacto contenedor seccion">
+            <h2>Contacto</h2>
+            <p class="seccion-descripcion">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+
+            <div class="contacto-grid">
+                <div class="formulario">
+                    <h3>Enviame un mensaje</h3>
+                    <?php  echo do_shortcode('[contact-form-7 id="37" title="Formulario de contacto 1"]'); ?>
+                </div>
+
+                <div class="informacion-medios">
+                    <h3>Medios de contácto</h3>
+                    <div class="medios">
+                        <div class="medio">
+                            <div class="icono">
+                                <i class="fa-solid fa-mobile-screen"></i>
+                            </div>
+                            <div class="contenido">
+                                <p class="titulo">Telefono</p>
+                                <a href="tel:+3143767156">3143767156</a>
+                            </div>
+                        </div>
+
+                        <div class="medio">
+                            <div class="icono">
+                                <i class="fa-regular fa-envelope"></i>
+                            </div>
+                            <div class="contenido">
+                                <p class="titulo">Email</p>
+                                <a href="mailto:victor_ivan2211@hotmail.com">victor_ivan2211@hotmail.com</a>
+                            </div>
+                        </div>
+
+                        <div class="medio">
+                            <div class="icono">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div class="contenido">
+                                <p class="titulo">Ubicación</p>
+                                <p>Manzanillo, Colima, México</p>
+                            </div>
+                        </div>
+                    </div>
+                    <h3>Redes Sociales</h3>
+                    <nav class="redes-menu">
+                        <a href="https://mx.linkedin.com/" target="_blank">
+                            <i class="fa-brands fa-linkedin"></i>
+                        </a>
+                        <a href="https://github.com/" target="_blank">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                    </nav>
                 </div>
             </div>
         </section>
