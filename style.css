@@ -145,7 +145,7 @@ button:hover {
         position: fixed;
         z-index: 100;
         background-color: var(--blanco);
-        width: 25rem;
+        width: 20rem;
         inset: 0 auto 0 0;
         overflow: hidden;
         box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
@@ -167,6 +167,12 @@ button:hover {
         height: 100%;
     }
 }
+.logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
 .foto {
     display: none;
 }
@@ -176,8 +182,8 @@ button:hover {
     }
 }
 .logo .foto img {
-    width: 18rem;
-    height: 18rem;
+    width: 15rem;
+    height: 15rem;
     border-radius: 50%;
 }
 .logo .nombre {
@@ -190,7 +196,7 @@ button:hover {
 @media (min-width: 993px) {
     .logo .nombre {
         margin-top: 1rem;
-        font-size: 1.8rem;
+        font-size: 1.6rem;
         font-weight: 400;
     }
 }
@@ -223,6 +229,11 @@ button:hover {
     text-transform: uppercase;
     transition: color .3s;
     font-size: 2rem;
+}
+@media (min-width: 768px) {
+    .menu-principal a {
+        font-size: 1.8rem;
+    }
 }
 .menu-principal a:hover {
     color: var(--primario);
@@ -279,7 +290,7 @@ button:hover {
 @media (min-width: 993px) {
     .main-content {
         /* background-color: var(--blanco); */
-        margin-left: 25rem;
+        margin-left: 20rem;
     }
 }
 
@@ -610,7 +621,6 @@ button:hover {
 .wpcf7-form .wpcf7-not-valid-tip {
     display: block;
     color: rgb(207, 11, 11);
-    margin: .5rem 0;
     font-size: 1.4rem;
 }
 .wpcf7-form .wpcf7-spinner {
@@ -622,6 +632,7 @@ button:hover {
 .wpcf7 form.invalid .wpcf7-response-output {
     font-size: 1.5rem;
     background-color: rgb(207, 11, 11);
+    padding: 1rem;
     color: var(--blanco);
     border: none;
 }
@@ -669,8 +680,8 @@ button:hover {
 .medio .contenido a {
    color: var(--gris-oscuro);
    display: inline;
-   background-image: linear-gradient(to right, var(--gris-oscuro) 0%, var(--gris-oscuro) 100%);
-   background-size: 0px 0.1rem;
+   background-image: linear-gradient(to right, var(--primario) 0%, var(--primario) 100%);
+   background-size: 0px 0.2rem;
    background-position: 0px 95%;
    background-repeat: no-repeat;
    padding: 0.2rem 0;
@@ -678,7 +689,7 @@ button:hover {
    
 }
 .medio:hover .contenido a {
-    background-size: 100% 0.1rem;
+    background-size: 100% 0.2rem;
 }
 .informacion-medios .redes-menu {
     justify-content: start;
