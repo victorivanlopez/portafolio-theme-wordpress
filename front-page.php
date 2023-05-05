@@ -1,18 +1,20 @@
 <?php get_header(); ?>
-        <section id="inicio" class="hero">
+        <section id="inicio" class="hero scroll">
             <div class="hero-content">
                 <p>Hola. Mi nombre es Víctor Iván López González</p>
                 <h1>Desarrollador Web <span id="element"></span></h1>
-                <div class="hero-action">
-                    <a class="boton boton-primaryTransp" href="#">Ver Portafolio</a>
+                <div class="hero-action smooth">
+                    <a class="boton boton-primaryTransp" href="#portafolio">Ver Portafolio</a>
                 </div>
             </div>
-            <a href="#sobre-mi">
-                <i class="fa-sharp fa-solid fa-arrow-down fa-bounce"></i>
-            </a>
+            <div class="smooth">
+                <a href="#sobre-mi">
+                    <i class="fa-sharp fa-solid fa-arrow-down fa-bounce"></i>
+                </a>
+            </div>
         </section>
 
-        <section id="sobre-mi" class="sobre-mi contenedor seccion">
+        <section id="sobre-mi" class="sobre-mi contenedor seccion scroll">
             <h2>Sobre mi</h2>
             <p class="seccion-descripcion">Conoce un poco más sobre mi, habilidades y mi experiencia</p>
 
@@ -43,7 +45,7 @@
             </div>
         </section>
 
-        <section class="experiencia-habilidades contenedor seccion">
+        <section id="experiencia" class="experiencia-habilidades contenedor seccion scroll">
             <h2>Experiencia y Habilidades</h2>
             <p class="seccion-descripcion">La experiencia y habilidades que he adquirido desarrollando proyectos</p>
              <div class="tabs">
@@ -101,7 +103,7 @@
             </div>
         </section>
 
-        <main class="portafolio contenedor seccion">
+        <main id="portafolio" class="portafolio contenedor seccion scroll">
             <h2>Portafolio</h2>
             <p class="seccion-descripcion">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
 
@@ -198,7 +200,7 @@
             </div>
         </main>
 
-        <section class="blog contenedor seccion">
+        <section id="blog" class="blog contenedor seccion scroll">
             <h2>Blog</h2>
             <p class="seccion-descripcion">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
             
@@ -269,7 +271,7 @@
             </div>
         </section>
 
-        <section class="contacto contenedor seccion">
+        <section id="contacto" class="contacto contenedor seccion scroll">
             <h2>Contacto</h2>
             <p class="seccion-descripcion">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
 
@@ -288,7 +290,7 @@
                             </div>
                             <div class="contenido">
                                 <p class="titulo">Telefono</p>
-                                <a href="tel:+3143767156">3143767156</a>
+                                <a href="tel:+3143767156">(314)3767-156</a>
                             </div>
                         </div>
 

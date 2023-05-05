@@ -3,20 +3,21 @@ document.addEventListener('DOMContentLoaded', () => {
     sectionScroll();
     menuBurger();
     typedHeading();
+    scrollSmooth();
 });
 
 function sectionScroll() {
-    const sections = document.querySelectorAll('section');
-    const navLinks = document.querySelectorAll('.menu-principal a');
+    const sections = document.querySelectorAll('.scroll');
+    const enlaces = document.querySelectorAll('.menu-principal a');
 
     window.addEventListener('scroll', () => {
         sections.forEach( (section, index) => {
             const rect = section.getBoundingClientRect();
-            if (rect.top <= 0 && rect.bottom > 0) {
-                navLinks.forEach(navLink => {
-                    navLink.classList.remove('active');
+            if (rect.top < 400) {
+                enlaces.forEach(enlace => {
+                    enlace.classList.remove('active');
                 });
-                navLinks[index].classList.add('active');
+                enlaces[index].classList.add('active');
             };
         });
     });
@@ -44,4 +45,17 @@ function typedHeading() {
             loop: true
           });
     };
+};
+
+function scrollSmooth() {
+    const enlaces = document.querySelectorAll('.smooth a');
+    enlaces.forEach( enlace => {
+        enlace.addEventListener('click', e => {
+            e.preventDefault(); 
+            
+            const seccionScroll = enlace.attributes.href.value;
+            const seccion = document.querySelector(seccionScroll); 
+            seccion.scrollIntoView({block: "start", behavior: "smooth"});
+        });
+    });
 };

@@ -141,15 +141,18 @@ button:hover {
 }
 
 /* HEADER */
+.header {
+
+}
 @media (min-width: 993px) {
     .header {
         position: fixed;
+        z-index: 100;
+        background-color: var(--blanco);
         width: 25rem;
         inset: 0 auto 0 0;
         overflow: hidden;
-        background-color: var(--blanco);
         box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-        z-index: 100;
     }
 }
 .navegacion {
@@ -581,21 +584,6 @@ button:hover {
         gap: 6rem;
     }
 }
-.wpcf7-form .campo-nt {
-    display: flex;
-    align-items: center;
-    gap: 2rem;
-}
-.wpcf7-form .campo-nt label {
-    display: block;
-    height: 3rem;
-}
-@media (min-width: 768px) {
-    .wpcf7-form .campo-nt label {
-        display: inline;
-        height: auto;
-    }
-}
 .wpcf7-form span {
     color: rgb(207, 11, 11);
 }
@@ -628,9 +616,7 @@ button:hover {
 }
 .wpcf7-form .wpcf7-not-valid-tip {
     display: block;
-    background-color: rgb(207, 11, 11);
-    color: var(--blanco);
-    padding: .5rem;
+    color: rgb(207, 11, 11);
     margin: .5rem 0;
     font-size: 1.4rem;
 }
@@ -642,7 +628,9 @@ button:hover {
 }
 .wpcf7 form.invalid .wpcf7-response-output {
     font-size: 1.5rem;
-    border-color: rgb(207, 11, 11);
+    background-color: rgb(207, 11, 11);
+    color: var(--blanco);
+    border: none;
 }
 .medios {
     display: flex;
@@ -687,7 +675,17 @@ button:hover {
 }
 .medio .contenido a {
    color: var(--gris-oscuro);
-   text-decoration: underline;
+   display: inline;
+   background-image: linear-gradient(to right, var(--gris-oscuro) 0%, var(--gris-oscuro) 100%);
+   background-size: 0px 0.1rem;
+   background-position: 0px 95%;
+   background-repeat: no-repeat;
+   padding: 0.2rem 0;
+   transition: background-size 0.4s;
+   
+}
+.medio:hover .contenido a {
+    background-size: 100% 0.1rem;
 }
 .informacion-medios .redes-menu {
     justify-content: start;

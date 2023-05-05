@@ -33,7 +33,7 @@
                     $args = array(
                         'theme_location' => 'menu-principal',
                         'container' => 'nav',
-                        'container_class' => 'menu-principal'
+                        'container_class' => 'menu-principal smooth'
                     );
                     wp_nav_menu($args);
                 ?>
@@ -56,7 +56,7 @@
             $args = array(
                 'theme_location' => 'menu-principal',
                 'container' => 'nav',
-                'container_class' => 'menu-principal'
+                'container_class' => 'menu-principal smooth'
             );
             wp_nav_menu($args);
         ?>
