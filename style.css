@@ -139,11 +139,7 @@ button:hover {
     text-align: center;
     margin-bottom: 5rem;
 }
-
 /* HEADER */
-.header {
-
-}
 @media (min-width: 993px) {
     .header {
         position: fixed;
@@ -230,9 +226,6 @@ button:hover {
 }
 .menu-principal a:hover {
     color: var(--primario);
-}
-.menu-principal li:first-of-type a {
-    /* color: var(--primario); */
 }
 .menu-principal a.active {
     color: var(--primario);
@@ -430,6 +423,7 @@ button:hover {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     gap: 3rem;
+    display: none;
 }
 @media (min-width: 768px) {
     .experiencias,
@@ -437,7 +431,9 @@ button:hover {
         grid-template-columns: repeat(2, 1fr);
     }
 }
-
+.mostrar {
+    display: grid;
+}
 .experiencia,
 .habilidad {
     padding: 3rem;
@@ -554,9 +550,6 @@ button:hover {
     width: 2.5rem;
     height: 2.5rem;
     transition: all .4s ease-in-out;
-}
-.card:hover .card-footer img {
-    transform: scale(1.2);
 }
 .card-footer .listado-meta p {
     margin: 0;

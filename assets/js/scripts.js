@@ -1,9 +1,15 @@
+let tab = 1;
 
 document.addEventListener('DOMContentLoaded', () => {
     sectionScroll();
     menuBurger();
     typedHeading();
     scrollSmooth();
+    mostrarSeccion();
+    tabs();
+
+    const enlaceInicio = document.querySelector('.menu-principal a');
+    enlaceInicio.classList.add('active');
 });
 
 function sectionScroll() {
@@ -58,4 +64,32 @@ function scrollSmooth() {
             seccion.scrollIntoView({block: "start", behavior: "smooth"});
         });
     });
+};
+
+function tabs() {
+    const botones = document.querySelectorAll('.tabs button');
+    botones.forEach(boton => {
+        boton.addEventListener('click', e => {
+            tab = parseInt(e.target.dataset.tab);
+            mostrarSeccion();
+        });
+    });
+};
+
+function mostrarSeccion() {
+    const seccion = document.querySelector(`#tab-${tab}`);
+    const seccionAnterior = document.querySelector('.mostrar');
+
+    if(seccionAnterior) {
+        seccionAnterior.classList.remove('mostrar');
+    };
+    seccion.classList.add('mostrar');
+
+    const tabActual = document.querySelector(`[data-tab="${tab}"]`);
+    const tabAnterior = document.querySelector('.actual');
+
+    if(tabAnterior) {
+        tabAnterior.classList.remove('actual');
+    };
+    tabActual.classList.add('actual');
 };

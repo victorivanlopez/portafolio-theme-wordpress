@@ -49,11 +49,11 @@
             <h2>Experiencia y Habilidades</h2>
             <p class="seccion-descripcion">La experiencia y habilidades que he adquirido desarrollando proyectos</p>
              <div class="tabs">
-                <button class="actual boton" type="button" data-paso="1">Experiencia</button>
-                <button class="boton" type="button" data-paso="2">Habilidades</button>
+                <button class="actual boton" type="button" data-tab="1">Experiencia</button>
+                <button class="boton" type="button" data-tab="2">Habilidades</button>
             </div>
 
-            <div id="paso-1" class="experiencias">
+            <div id="tab-1" class="experiencias">
                 <div class="experiencia">
                     <p class="periodo">2018-2020</p>
                     <h3 class="nombre">Coorninador de Informática</h3>
@@ -83,7 +83,7 @@
                 </div>
             </div>
 
-            <div id="paso-2" class="habilidades">
+            <div id="tab-2" class="habilidades">
                 <div class="habilidad">
                     <i class="fa-brands fa-figma"></i>
                     <h3 class="nombre">Maquetación y Diseño</h3>
