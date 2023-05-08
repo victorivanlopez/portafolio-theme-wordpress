@@ -33,6 +33,7 @@ Tags: portafolio
 html {
     box-sizing: border-box;
     font-size: 62.5%; /* 10px = 1rem */
+    scroll-behavior: smooth; /*Efecto Smooth en enlaces entre secciones*/
 }
 
 *, *:before, *:after {
@@ -143,7 +144,7 @@ button:hover {
 @media (min-width: 993px) {
     .header {
         position: fixed;
-        z-index: 100;
+        z-index: 1;
         background-color: var(--blanco);
         width: 20rem;
         inset: 0 auto 0 0;
@@ -487,18 +488,8 @@ button:hover {
 /* PORTAFOLIO */
 .listado-cards {
     display: grid;
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 30rem), 1fr));
     gap: 4rem;
-}
-@media (min-width: 993px) {
-    .listado-cards {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-@media (min-width: 1200px) {
-    .listado-cards {
-        grid-template-columns: repeat(3, 1fr);
-    }
 }
 .card{
     border: 1px solid var(--gris-claro);
@@ -521,7 +512,7 @@ button:hover {
     transform: scale(1.2);
 }
 .card-content {
-    padding: 3rem;
+    padding: 2rem;
 }
 .card-content h3 a {
     display: inline;
@@ -535,6 +526,26 @@ button:hover {
 .card:hover .card-content h3 a {
     background-size: 100% 0.2rem;
 }
+.card-botones {
+    display: flex;
+    justify-content: space-around;
+}
+.card-botones .boton {
+    padding: 0;
+    margin: 0.5rem 0;
+    font-weight: 400;
+    /* font-size: 1.5rem; */
+    text-transform: unset;
+    /* border: 1px solid var(--gris-claro); */
+    opacity: 1;
+    transition: color 0.3s, opacity 0.3s;
+}
+.card-botones .boton:hover {
+    color: var(--primario);
+}
+/* .card:hover .card-botones .boton {
+    opacity: 1;
+} */
 .card-content .categoria {
     font-size: 1.4rem;
     margin-bottom: 0.5rem;

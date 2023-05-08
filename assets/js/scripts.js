@@ -4,7 +4,6 @@ document.addEventListener('DOMContentLoaded', () => {
     sectionScroll();
     menuBurger();
     typedHeading();
-    scrollSmooth();
     mostrarSeccion();
     tabs();
 
@@ -51,19 +50,6 @@ function typedHeading() {
             loop: true
           });
     };
-};
-
-function scrollSmooth() {
-    const enlaces = document.querySelectorAll('.smooth a');
-    enlaces.forEach( enlace => {
-        enlace.addEventListener('click', e => {
-            e.preventDefault(); 
-            
-            const seccionScroll = enlace.attributes.href.value;
-            const seccion = document.querySelector(seccionScroll); 
-            seccion.scrollIntoView({block: "start", behavior: "smooth"});
-        });
-    });
 };
 
 function tabs() {

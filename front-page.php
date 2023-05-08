@@ -117,7 +117,10 @@
 
                     <div class="card-content">
                         <h3><a href="#">MuebleWorld</a></h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit sint quod aliquid.</p>
+                        <div class="card-botones">
+                            <a class="boton" href="#">Más Detalles</a>
+                            <a class="boton" href="#">Ver Repositorio</a>
+                        </div>
                     </div>
 
                     <div class="card-footer">
@@ -147,7 +150,10 @@
 
                     <div class="card-content">
                         <h3><a href="#">Meeti</a></h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit sint quod aliquid.</p>
+                        <div class="card-botones">
+                            <a class="boton" href="#">Más Detalles</a>
+                            <a class="boton" href="#">Ver Repositorio</a>
+                        </div>
                     </div>
 
                     <div class="card-footer">
@@ -177,7 +183,10 @@
 
                     <div class="card-content">
                         <h3><a href="#">GuitarLA</a></h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit sint quod aliquid.</p>
+                        <div class="card-botones">
+                            <a class="boton" href="#">Más Detalles</a>
+                            <a class="boton" href="#">Ver Repositorio</a>
+                        </div>
                     </div>
 
                     <div class="card-footer">
