@@ -106,6 +106,24 @@
                         <p class="descripcion"><?php echo esc_html($descripcion); ?></p>
                     </div>
                 <?php endif; ?>
+
+                <?php $experiencia_4 = get_field('experiencia_4');
+                if(validarValues($experiencia_4)) :?>
+                    <div class="experiencia">
+                        <?php      
+                            $fecha_inicio = $experiencia_4['inicio'];
+                            $fecha_fin = $experiencia_4['fin'];
+                            $empresa = $experiencia_4['empresa'];
+                            $cargo = $experiencia_4['cargo'];
+                            $descripcion = $experiencia_4['descripcion']; 
+                        ?>
+
+                        <p class="periodo"><?php echo esc_html($fecha_inicio); ?>-<?php  echo esc_html($fecha_fin); ?></p>
+                        <h3 class="nombre"><?php echo esc_html($cargo); ?></h3>
+                        <p class="empresa"><?php echo esc_html($empresa); ?></p>
+                        <p class="descripcion"><?php echo esc_html($descripcion); ?></p>
+                    </div>
+                <?php endif; ?>
             </div>
 
             <div id="tab-2" class="habilidades">
