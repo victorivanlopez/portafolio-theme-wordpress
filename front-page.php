@@ -127,22 +127,53 @@
             </div>
 
             <div id="tab-2" class="habilidades">
-                <div class="habilidad">
-                    <i class="fa-brands fa-figma"></i>
-                    <h3 class="nombre">Maquetación y Diseño</h3>
-                </div>
-                <div class="habilidad">
-                    <i class="fa-brands fa-react"></i>
-                    <h3 class="nombre">Desarrollo con React</h3>
-                </div>
-                <div class="habilidad">
-                    <i class="fa-solid fa-database"></i>
-                    <h3 class="nombre">Manejo de Bases de Datos</h3>
-                </div>
-                <div class="habilidad">
-                    <i class="fa-solid fa-code-branch"></i>
-                    <h3 class="nombre">Uso de Git y GitHub</h3>
-                </div>
+            <?php $habilidad_1 = get_field('habilidad_1');
+                if(validarValues($habilidad_1)) :?>
+                    <div class="habilidad">
+                        <?php      
+                            $nombre = $habilidad_1['nombre'];
+                            $icono = $habilidad_1['icono'];
+                        ?>
+                        <i class="<?php echo esc_attr($icono); ?>"></i>
+                        <h3 class="nombre"><?php echo esc_html($nombre); ?></h3>
+                    </div>
+                <?php endif; ?>
+
+                <?php $habilidad_2 = get_field('habilidad_2');
+                if(validarValues($habilidad_2)) :?>
+                    <div class="habilidad">
+                        <?php      
+                            $nombre = $habilidad_2['nombre'];
+                            $icono = $habilidad_2['icono'];
+                        ?>
+                        <i class="<?php echo esc_attr($icono); ?>"></i>
+                        <h3 class="nombre"><?php echo esc_html($nombre); ?></h3>
+                    </div>
+                <?php endif; ?>
+
+                <?php $habilidad_3 = get_field('habilidad_3');
+                if(validarValues($habilidad_3)) :?>
+                    <div class="habilidad">
+                        <?php      
+                            $nombre = $habilidad_3['nombre'];
+                            $icono = $habilidad_3['icono'];
+                        ?>
+                        <i class="<?php echo esc_attr($icono); ?>"></i>
+                        <h3 class="nombre"><?php echo esc_html($nombre); ?></h3>
+                    </div>
+                <?php endif; ?>
+
+                <?php $habilidad_4 = get_field('habilidad_4');
+                if(validarValues($habilidad_4)) :?>
+                    <div class="habilidad">
+                        <?php      
+                            $nombre = $habilidad_4['nombre'];
+                            $icono = $habilidad_4['icono'];
+                        ?>
+                        <i class="<?php echo esc_attr($icono); ?>"></i>
+                        <h3 class="nombre"><?php echo esc_html($nombre); ?></h3>
+                    </div>
+                <?php endif; ?>
             </div>
         </section>
 
@@ -342,7 +373,7 @@
                             </div>
                             <div class="contenido">
                                 <p class="titulo">Telefono</p>
-                                <a href="tel:+3143767156">(314)3767-156</a>
+                                <a href="tel:+<?php the_field('telefono'); ?>"><?php the_field('telefono'); ?></a>
                             </div>
                         </div>
 
@@ -352,7 +383,7 @@
                             </div>
                             <div class="contenido">
                                 <p class="titulo">Email</p>
-                                <a href="mailto:victor_ivan2211@hotmail.com">victor_ivan2211@hotmail.com</a>
+                                <a href="mailto:<?php the_field('email'); ?>"><?php the_field('email'); ?></a>
                             </div>
                         </div>
 
@@ -362,7 +393,7 @@
                             </div>
                             <div class="contenido">
                                 <p class="titulo">Ubicación</p>
-                                <p>Manzanillo, Colima, México</p>
+                                <p><?php the_field('ubicacion'); ?></p>
                             </div>
                         </div>
                     </div>
