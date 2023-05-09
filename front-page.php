@@ -1,7 +1,7 @@
 <?php get_header(); ?>
         <section id="inicio" class="hero scroll">
             <div class="hero-content">
-                <p>Hola. Mi nombre es Víctor Iván López González</p>
+                <p>Hola. Mi nombre es <?php the_field('nombre'); ?></p>
                 <h1>Desarrollador Web <span id="element"></span></h1>
                 <div class="hero-action smooth">
                     <a class="boton boton-primaryTransp" href="#portafolio">Ver Portafolio</a>
@@ -21,24 +21,23 @@
             <div class="sobre-mi-content">
                 <div class="resumen">
                     <h3>Hola. Soy <span>Víctor Iván López</span></h3>
-                    <p>Me gradué de la carrera de Ingeniería en Telemática en la Universidad de Colima en el año 2017. Al inicio de mi carrera laboral, me dediqué a temas relacionados con la tecnología, las redes y la comunicación de datos. Siempre he sentido una gran pasión por la programación web, y he fortalecido mis conocimientos de manera autodidacta en programación y diseño web.
-                    <p>Actualmente, disfruto trabajar en el desarrollo de páginas web para emprendedores que buscan mejorar su negocio y ofrecer sus servicios o productos de manera más profesional a sus clientes.</p>
+                    <?php the_field('resumen'); ?>
                 </div>
 
                 <div class="biografia">
                     <h3>Información Adicional</h3>
                     <ul class="biografia-listado">
                         <li>
-                            <p><span>Nombre:</span> Víctor Iván López González</p>
+                            <p><span>Nombre:</span> <?php the_field('nombre_completo') ?></p>
                         </li>
                         <li>
-                            <p><span>Puesto:</span> Desarrollador Front-end</p>
+                            <p><span>Puesto:</span> <?php the_field('profesion') ?></p>
                         </li>
                         <li>
-                            <p><span>Edad:</span> 28 Años</p>
+                            <p><span>Edad:</span> <?php the_field('edad') ?> Años</p>
                         </li>
                         <li>
-                            <p><span>País:</span> México</p>
+                            <p><span>País:</span> <?php the_field('pais') ?></p>
                         </li>
                     </ul>
                 </div>
@@ -54,33 +53,59 @@
             </div>
 
             <div id="tab-1" class="experiencias">
-                <div class="experiencia">
-                    <p class="periodo">2018-2020</p>
-                    <h3 class="nombre">Coorninador de Informática</h3>
-                    <p class="empresa">ASIPONA</p>
-                    <p class="descripcion">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis autem minima velit quibusdam vero.</p>
-                </div>
+                <?php $experiencia_1 = get_field('experiencia_1');
+                if(validarValues($experiencia_1)) :?>
+                    <div class="experiencia">
+                        <?php      
+                            $fecha_inicio = $experiencia_1['inicio'];
+                            $fecha_fin = $experiencia_1['fin'];
+                            $empresa = $experiencia_1['empresa'];
+                            $cargo = $experiencia_1['cargo'];
+                            $descripcion = $experiencia_1['descripcion']; 
+                        ?>
 
-                <div class="experiencia">
-                    <p class="periodo">2018-2020</p>
-                    <h3 class="nombre">Coorninador de Informática</h3>
-                    <p class="empresa">ASIPONA</p>
-                    <p class="descripcion">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis autem minima velit quibusdam vero.</p>
-                </div>
+                        <p class="periodo"><?php echo esc_html($fecha_inicio); ?>-<?php  echo esc_html($fecha_fin); ?></p>
+                        <h3 class="nombre"><?php echo esc_html($cargo); ?></h3>
+                        <p class="empresa"><?php echo esc_html($empresa); ?></p>
+                        <p class="descripcion"><?php echo esc_html($descripcion); ?></p>
+                    </div>
+                <?php endif; ?>
 
-                <div class="experiencia">
-                    <p class="periodo">2018-2020</p>
-                    <h3 class="nombre">Coorninador de Informática</h3>
-                    <p class="empresa">ASIPONA</p>
-                    <p class="descripcion">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis autem minima velit quibusdam vero.</p>
-                </div>
+                <?php $experiencia_2 = get_field('experiencia_2'); 
+                if(validarValues($experiencia_2)) :?>
+                    <div class="experiencia">
+                        <?php      
+                            $fecha_inicio = $experiencia_2['inicio'];
+                            $fecha_fin = $experiencia_2['fin'];
+                            $empresa = $experiencia_2['empresa'];
+                            $cargo = $experiencia_2['cargo'];
+                            $descripcion = $experiencia_2['descripcion']; 
+                        ?>
 
-                <div class="experiencia">
-                    <p class="periodo">2018-2020</p>
-                    <h3 class="nombre">Coorninador de Informática</h3>
-                    <p class="empresa">ASIPONA</p>
-                    <p class="descripcion">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis autem minima velit quibusdam vero.</p>
-                </div>
+                        <p class="periodo"><?php echo esc_html($fecha_inicio); ?>-<?php  echo esc_html($fecha_fin); ?></p>
+                        <h3 class="nombre"><?php echo esc_html($cargo); ?></h3>
+                        <p class="empresa"><?php echo esc_html($empresa); ?></p>
+                        <p class="descripcion"><?php echo esc_html($descripcion); ?></p>
+                    </div>
+                <?php endif; ?>
+
+                <?php $experiencia_3 = get_field('experiencia_3');
+                if(validarValues($experiencia_3)) :?>
+                    <div class="experiencia">
+                        <?php      
+                            $fecha_inicio = $experiencia_3['inicio'];
+                            $fecha_fin = $experiencia_3['fin'];
+                            $empresa = $experiencia_3['empresa'];
+                            $cargo = $experiencia_3['cargo'];
+                            $descripcion = $experiencia_3['descripcion']; 
+                        ?>
+
+                        <p class="periodo"><?php echo esc_html($fecha_inicio); ?>-<?php  echo esc_html($fecha_fin); ?></p>
+                        <h3 class="nombre"><?php echo esc_html($cargo); ?></h3>
+                        <p class="empresa"><?php echo esc_html($empresa); ?></p>
+                        <p class="descripcion"><?php echo esc_html($descripcion); ?></p>
+                    </div>
+                <?php endif; ?>
             </div>
 
             <div id="tab-2" class="habilidades">
