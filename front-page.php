@@ -20,7 +20,7 @@
 
             <div class="sobre-mi-content">
                 <div class="resumen">
-                    <h3>Hola. Soy <span>Víctor Iván López</span></h3>
+                    <h3>Hola. Soy <span><?php the_field('nombre'); ?></span></h3>
                     <?php the_field('resumen'); ?>
                 </div>
 
@@ -181,177 +181,134 @@
             <h2>Portafolio</h2>
             <p class="seccion-descripcion">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
 
-            <div class="listado-cards">
-                <div class="card">
-                    <div class="card-imagen">
-                        <a href="#">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/proyecto1.png" alt="Proyecto">
-                        </a>           
-                    </div>
+                <?php 
+                    $args = array(
+                        'post_type' => 'proyecto',
+                        'posts_per_page' => 3
+                    );
 
-                    <div class="card-content">
-                        <h3><a href="#">MuebleWorld</a></h3>
-                        <div class="card-botones">
-                            <a class="boton" href="#">Más Detalles</a>
-                            <a class="boton" href="#">Ver Repositorio</a>
+                    $proyectos = new WP_Query($args);
+                
+                if($proyectos->have_posts()) : ?>
+                    <div class="listado-cards">
+                    <?php while ( $proyectos->have_posts() ) :
+                        $proyectos->the_post(); ?>
+                        <div class="card">
+                            <div class="card-imagen">
+                                <a href="<?php the_permalink() ?>">
+                                    <?php the_post_thumbnail('medium') ?>
+                                </a>           
+                            </div>
+
+                            <div class="card-content">
+                                <h3><a href="<?php the_permalink() ?>"><?php the_title() ?></a></h3>
+                                <div class="card-botones">
+                                    <a class="boton" href="<?php the_permalink() ?>">Más Detalles</a>
+                                    <a class="boton" href="#">Ver Repositorio</a>
+                                </div>
+                            </div>
+
+                            <div class="card-footer">
+                                <ul class="listado-meta">
+                                    <?php $tecnologia_1 = get_field('tecnologia_1');
+                                    if($tecnologia_1) :?>
+                                        <li class="meta">
+                                            <?php      
+                                                $imagenURL = $tecnologia_1["imagen"]["sizes"]["medium"];
+                                                $imagenNombre = $tecnologia_1["imagen"]["title"];
+                                            ?>
+                                            <img src="<?php echo esc_url($imagenURL); ?>" alt="<?php echo esc_html($imagenNombre); ?>">
+                                        </li>
+                                    <?php endif; ?>
+                                    
+                                    <?php $tecnologia_2 = get_field('tecnologia_2');
+                                    if($tecnologia_2) :?>
+                                        <li class="meta">
+                                            <?php      
+                                                $imagenURL = $tecnologia_2["imagen"]["sizes"]["medium"];
+                                                $imagenNombre = $tecnologia_2["imagen"]["title"];
+                                            ?>
+                                            <img src="<?php echo esc_url($imagenURL); ?>" alt="<?php echo esc_html($imagenNombre); ?>">
+                                        </li>
+                                    <?php endif; ?>
+                                    
+                                    <?php $tecnologia_3 = get_field('tecnologia_3');
+                                    if($tecnologia_3) :?>
+                                        <li class="meta">
+                                            <?php      
+                                                $imagenURL = $tecnologia_3["imagen"]["sizes"]["medium"];
+                                                $imagenNombre = $tecnologia_3["imagen"]["title"];
+                                            ?>
+                                            <img src="<?php echo esc_url($imagenURL); ?>" alt="<?php echo esc_html($imagenNombre); ?>">
+                                        </li>
+                                    <?php endif; ?>
+                                    
+                                    <?php $tecnologia_4 = get_field('tecnologia_4');
+                                    if($tecnologia_4) :?>
+                                        <li class="meta">
+                                            <?php      
+                                                $imagenURL = $tecnologia_4["imagen"]["sizes"]["medium"];
+                                                $imagenNombre = $tecnologia_4["imagen"]["title"];
+                                            ?>
+                                            <img src="<?php echo esc_url($imagenURL); ?>" alt="<?php echo esc_html($imagenNombre); ?>">
+                                        </li>
+                                    <?php endif; ?>
+                                </ul>
+                            </div>
                         </div>
-                    </div>
-
-                    <div class="card-footer">
-                        <ul class="listado-meta">
-                            <li class="meta">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-sass.png" alt="Icono Técnologia">
-                            </li>
-                            <li class="meta">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-js.png" alt="Icono Técnologia">
-                            </li>
-                            <li class="meta">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-php.png" alt="Icono Técnologia">
-                            </li>
-                            <li class="meta">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-mysql.png" alt="Icono Técnologia">
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div class="card-imagen">
-                        <a href="#">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/proyecto2.png" alt="Proyecto">
-                        </a>           
-                    </div>
-
-                    <div class="card-content">
-                        <h3><a href="#">Meeti</a></h3>
-                        <div class="card-botones">
-                            <a class="boton" href="#">Más Detalles</a>
-                            <a class="boton" href="#">Ver Repositorio</a>
-                        </div>
-                    </div>
-
-                    <div class="card-footer">
-                        <ul class="listado-meta">
-                            <li class="meta">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-mongodb.png" alt="Icono Técnologia">
-                            </li>
-                            <li class="meta">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-express.png" alt="Icono Técnologia">
-                            </li>
-                            <li class="meta">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-react.png" alt="Icono Técnologia">
-                            </li>
-                            <li class="meta">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-nodejs.png" alt="Icono Técnologia">
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div class="card-imagen">
-                        <a href="#">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/proyecto3.png" alt="Proyecto">
-                        </a>           
-                    </div>
-
-                    <div class="card-content">
-                        <h3><a href="#">GuitarLA</a></h3>
-                        <div class="card-botones">
-                            <a class="boton" href="#">Más Detalles</a>
-                            <a class="boton" href="#">Ver Repositorio</a>
-                        </div>
-                    </div>
-
-                    <div class="card-footer">
-                        <ul class="listado-meta">
-                            <li class="meta">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-mongodb.png" alt="Icono Técnologia">
-                            </li>
-                            <li class="meta">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-express.png" alt="Icono Técnologia">
-                            </li>
-                            <li class="meta">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-react.png" alt="Icono Técnologia">
-                            </li>
-                            <li class="meta">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-nodejs.png" alt="Icono Técnologia">
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+                    <?php endwhile; ?>
+                     </div>
+                <?php else : ?>
+                    <p class="seccion-descripcion">Sin proyectos. Por favor agrega algún proyecto.</p>
+                <?php endif;
+                wp_reset_postdata();
+                ?>
         </main>
 
         <section id="blog" class="blog contenedor seccion scroll">
             <h2>Blog</h2>
             <p class="seccion-descripcion">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-            
-            <div class="listado-cards">
-                <div class="card">
-                    <div class="card-imagen">
-                        <a href="#">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/entrada1.png" alt="Entrada">
-                        </a>           
-                    </div>
 
-                    <div class="card-content">
-                        <p class="categoria"><a href="#">Desarrollo Web</a></p>
-                        <h3><a href="#">Lo que debes saber sobre una tienda virtual</a></h3>
-                    </div>
+            <?php 
+                $args = array(
+                    'post_type' => 'post',
+                    'posts_per_page' => 3
+                );
 
-                    <div class="card-footer">
-                        <ul class="listado-meta">
-                            <li class="meta meta-blog">
-                                <i class="fa-solid fa-calendar-days"></i>
-                                <p>03 de Mayo de 2023</p>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-imagen">
-                        <a href="#">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/entrada2.png" alt="Entrada">
-                        </a>           
-                    </div>
+                $blog = new WP_Query($args);
+                
+                if($blog->have_posts()) : ?>
+                    <div class="listado-cards">
+                    <?php while ( $blog->have_posts() ) :
+                        $blog->the_post(); ?>
+                        <div class="card">
+                            <div class="card-imagen">
+                                <a href="<?php the_permalink() ?>">
+                                    <?php the_post_thumbnail('medium') ?>
+                                </a>           
+                            </div>
 
-                    <div class="card-content">
-                        <p class="categoria"><a href="#">Desarrollo Web</a></p>
-                        <h3><a href="#">6 Ventajas de invertir en una pagina web</a></h3>
-                    </div>
+                            <div class="card-content">
+                                <?php the_category(); ?>
+                                <h3><a href="<?php the_permalink() ?>"><?php the_title() ?></a></h3>
+                            </div>
 
-                    <div class="card-footer">
-                        <ul class="listado-meta">
-                            <li class="meta meta-blog">
-                                <i class="fa-solid fa-calendar-days"></i>
-                                <p>05 de Mayo de 2023</p>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-imagen">
-                        <a href="#">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/entrada3.png" alt="Entrada">
-                        </a>           
-                    </div>
-
-                    <div class="card-content">
-                        <p class="categoria"><a href="#">Desarrollo Web</a></p>
-                        <h3><a href="#">Beneficios al realizar un mantenimiento web</a></h3>
-                    </div>
-
-                    <div class="card-footer">
-                        <ul class="listado-meta">
-                            <li class="meta meta-blog">
-                                <i class="fa-solid fa-calendar-days"></i>
-                                <p>07 de Mayo de 2023</p>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+                            <div class="card-footer">
+                                <ul class="listado-meta">
+                                    <li class="meta meta-blog">
+                                        <i class="fa-solid fa-calendar-days"></i>
+                                        <p><?php the_time(get_option('date_format')); ?></p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    <?php endwhile; ?>
+                     </div>
+                <?php else : ?>
+                    <p class="seccion-descripcion">Sin entradas. Por favor agrega una entrada.</p>
+                <?php endif;
+                wp_reset_postdata();
+            ?>
         </section>
 
         <section id="contacto" class="contacto contenedor seccion scroll">
@@ -399,12 +356,26 @@
                     </div>
                     <h3>Redes Sociales</h3>
                     <nav class="redes-menu">
-                        <a href="https://mx.linkedin.com/" target="_blank">
-                            <i class="fa-brands fa-linkedin"></i>
-                        </a>
-                        <a href="https://github.com/" target="_blank">
-                            <i class="fa-brands fa-github"></i>
-                        </a>
+                        <?php $red_social_1 = get_field('red_social_1');
+                        if($red_social_1) :?>
+                            <?php      
+                                $redIcono = $red_social_1["icono"];
+                                $redURL = $red_social_1["url"];
+                            ?>
+                             <a href="<?php echo esc_url($redURL); ?>" target="_blank">
+                                <i class="<?php echo esc_attr($redIcono); ?>"></i>
+                            </a>
+                        <?php endif; ?>
+                        <?php $red_social_2 = get_field('red_social_2');
+                        if($red_social_2) :?>
+                            <?php      
+                                $redIcono = $red_social_2["icono"];
+                                $redURL = $red_social_2["url"];
+                            ?>
+                             <a href="<?php echo esc_url($redURL); ?>" target="_blank">
+                                <i class="<?php echo esc_attr($redIcono); ?>"></i>
+                            </a>
+                        <?php endif; ?>
                     </nav>
                 </div>
             </div>

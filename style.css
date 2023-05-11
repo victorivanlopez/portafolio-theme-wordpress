@@ -534,21 +534,16 @@ button:hover {
     padding: 0;
     margin: 0.5rem 0;
     font-weight: 400;
-    /* font-size: 1.5rem; */
     text-transform: unset;
-    /* border: 1px solid var(--gris-claro); */
     opacity: 1;
     transition: color 0.3s, opacity 0.3s;
 }
 .card-botones .boton:hover {
     color: var(--primario);
 }
-/* .card:hover .card-botones .boton {
-    opacity: 1;
-} */
-.card-content .categoria {
+.card-content .post-categories {
     font-size: 1.4rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.6rem;
 }
 .card-content p {
     font-size: 1.5rem;
