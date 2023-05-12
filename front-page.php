@@ -180,95 +180,34 @@
         <main id="portafolio" class="portafolio contenedor seccion scroll">
             <h2>Portafolio</h2>
             <p class="seccion-descripcion">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <?php 
+                $args = array(
+                    'post_type' => 'proyecto',
+                    'posts_per_page' => 3
+                );
 
-                <?php 
-                    $args = array(
-                        'post_type' => 'proyecto',
-                        'posts_per_page' => 3
-                    );
-
-                    $proyectos = new WP_Query($args);
-                
-                if($proyectos->have_posts()) : ?>
-                    <div class="listado-cards">
+                $proyectos = new WP_Query($args);
+            
+            if($proyectos->have_posts()) : ?>
+                <div class="listado-cards">
                     <?php while ( $proyectos->have_posts() ) :
-                        $proyectos->the_post(); ?>
-                        <div class="card">
-                            <div class="card-imagen">
-                                <a href="<?php the_permalink() ?>">
-                                    <?php the_post_thumbnail('medium') ?>
-                                </a>           
-                            </div>
+                        $proyectos->the_post();
+                        get_template_part('template-parts/proyecto');
+                    endwhile; ?>
+                </div>
+            <?php else : ?>
+                <p class="seccion-descripcion">Sin proyectos. Por favor agrega algún proyecto.</p>
+            <?php endif;
+            wp_reset_postdata(); ?>
 
-                            <div class="card-content">
-                                <h3><a href="<?php the_permalink() ?>"><?php the_title() ?></a></h3>
-                                <div class="card-botones">
-                                    <a class="boton" href="<?php the_permalink() ?>">Más Detalles</a>
-                                    <a class="boton" href="#">Ver Repositorio</a>
-                                </div>
-                            </div>
-
-                            <div class="card-footer">
-                                <ul class="listado-meta">
-                                    <?php $tecnologia_1 = get_field('tecnologia_1');
-                                    if($tecnologia_1) :?>
-                                        <li class="meta">
-                                            <?php      
-                                                $imagenURL = $tecnologia_1["imagen"]["sizes"]["medium"];
-                                                $imagenNombre = $tecnologia_1["imagen"]["title"];
-                                            ?>
-                                            <img src="<?php echo esc_url($imagenURL); ?>" alt="<?php echo esc_html($imagenNombre); ?>">
-                                        </li>
-                                    <?php endif; ?>
-                                    
-                                    <?php $tecnologia_2 = get_field('tecnologia_2');
-                                    if($tecnologia_2) :?>
-                                        <li class="meta">
-                                            <?php      
-                                                $imagenURL = $tecnologia_2["imagen"]["sizes"]["medium"];
-                                                $imagenNombre = $tecnologia_2["imagen"]["title"];
-                                            ?>
-                                            <img src="<?php echo esc_url($imagenURL); ?>" alt="<?php echo esc_html($imagenNombre); ?>">
-                                        </li>
-                                    <?php endif; ?>
-                                    
-                                    <?php $tecnologia_3 = get_field('tecnologia_3');
-                                    if($tecnologia_3) :?>
-                                        <li class="meta">
-                                            <?php      
-                                                $imagenURL = $tecnologia_3["imagen"]["sizes"]["medium"];
-                                                $imagenNombre = $tecnologia_3["imagen"]["title"];
-                                            ?>
-                                            <img src="<?php echo esc_url($imagenURL); ?>" alt="<?php echo esc_html($imagenNombre); ?>">
-                                        </li>
-                                    <?php endif; ?>
-                                    
-                                    <?php $tecnologia_4 = get_field('tecnologia_4');
-                                    if($tecnologia_4) :?>
-                                        <li class="meta">
-                                            <?php      
-                                                $imagenURL = $tecnologia_4["imagen"]["sizes"]["medium"];
-                                                $imagenNombre = $tecnologia_4["imagen"]["title"];
-                                            ?>
-                                            <img src="<?php echo esc_url($imagenURL); ?>" alt="<?php echo esc_html($imagenNombre); ?>">
-                                        </li>
-                                    <?php endif; ?>
-                                </ul>
-                            </div>
-                        </div>
-                    <?php endwhile; ?>
-                     </div>
-                <?php else : ?>
-                    <p class="seccion-descripcion">Sin proyectos. Por favor agrega algún proyecto.</p>
-                <?php endif;
-                wp_reset_postdata();
-                ?>
+            <div class="contenedor-boton">
+                <a class="boton boton-primary" href="#">Todos los Proyectos</a>
+            </div>
         </main>
 
         <section id="blog" class="blog contenedor seccion scroll">
             <h2>Blog</h2>
             <p class="seccion-descripcion">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-
             <?php 
                 $args = array(
                     'post_type' => 'post',
@@ -279,36 +218,19 @@
                 
                 if($blog->have_posts()) : ?>
                     <div class="listado-cards">
-                    <?php while ( $blog->have_posts() ) :
-                        $blog->the_post(); ?>
-                        <div class="card">
-                            <div class="card-imagen">
-                                <a href="<?php the_permalink() ?>">
-                                    <?php the_post_thumbnail('medium') ?>
-                                </a>           
-                            </div>
-
-                            <div class="card-content">
-                                <?php the_category(); ?>
-                                <h3><a href="<?php the_permalink() ?>"><?php the_title() ?></a></h3>
-                            </div>
-
-                            <div class="card-footer">
-                                <ul class="listado-meta">
-                                    <li class="meta meta-blog">
-                                        <i class="fa-solid fa-calendar-days"></i>
-                                        <p><?php the_time(get_option('date_format')); ?></p>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    <?php endwhile; ?>
+                        <?php while ( $blog->have_posts() ) :
+                            $blog->the_post();
+                            get_template_part('template-parts/blog');
+                        endwhile; ?>
                      </div>
                 <?php else : ?>
                     <p class="seccion-descripcion">Sin entradas. Por favor agrega una entrada.</p>
                 <?php endif;
-                wp_reset_postdata();
-            ?>
+                wp_reset_postdata(); ?>
+
+            <div class="contenedor-boton">
+                <a class="boton boton-primary" href="#">Todas las Entradas</a>
+            </div>
         </section>
 
         <section id="contacto" class="contacto contenedor seccion scroll">
@@ -356,26 +278,7 @@
                     </div>
                     <h3>Redes Sociales</h3>
                     <nav class="redes-menu">
-                        <?php $red_social_1 = get_field('red_social_1');
-                        if($red_social_1) :?>
-                            <?php      
-                                $redIcono = $red_social_1["icono"];
-                                $redURL = $red_social_1["url"];
-                            ?>
-                             <a href="<?php echo esc_url($redURL); ?>" target="_blank">
-                                <i class="<?php echo esc_attr($redIcono); ?>"></i>
-                            </a>
-                        <?php endif; ?>
-                        <?php $red_social_2 = get_field('red_social_2');
-                        if($red_social_2) :?>
-                            <?php      
-                                $redIcono = $red_social_2["icono"];
-                                $redURL = $red_social_2["url"];
-                            ?>
-                             <a href="<?php echo esc_url($redURL); ?>" target="_blank">
-                                <i class="<?php echo esc_attr($redIcono); ?>"></i>
-                            </a>
-                        <?php endif; ?>
+                        <?php get_template_part('template-parts/redes-menu'); ?>
                     </nav>
                 </div>
             </div>

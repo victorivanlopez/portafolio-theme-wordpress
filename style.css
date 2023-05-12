@@ -108,7 +108,7 @@ button:hover {
 }
 .boton,
 .wpcf7-form .wpcf7-submit {
-    padding: 1rem 3rem;
+    padding: 1rem 2rem;
     text-align: center;
     font-weight: 500;
     text-transform: uppercase;
@@ -290,7 +290,6 @@ button:hover {
 }
 @media (min-width: 993px) {
     .main-content {
-        /* background-color: var(--blanco); */
         margin-left: 20rem;
     }
 }
@@ -509,7 +508,7 @@ button:hover {
     transition: transform 0.4s ease-in-out;
 }
 .card:hover .card-imagen img {
-    transform: scale(1.2);
+    transform: scale(1.1);
 }
 .card-content {
     padding: 2rem;
@@ -579,6 +578,21 @@ button:hover {
 .card:hover .card-footer i {
     color: var(--primario);
 }
+.contenedor-boton {
+    margin: 2rem 0 0 0;
+}
+.contenedor-boton .boton {
+    width: 100%;
+}
+@media (min-width: 768px) {
+    .contenedor-boton {
+        display: flex;
+        justify-content: end;
+    }
+    .contenedor-boton .boton {
+        width: auto;
+    }
+}
 /* CONTACTO */
 .contacto h3 {
     margin-bottom: 3rem;
@@ -608,6 +622,7 @@ button:hover {
     border: 1px solid var(--gris-oscuro);
 }
 .wpcf7-form .wpcf7-submit {
+    /* padding: 1rem 3rem; */
     background-color: var(--primario);
     border: 1px solid var(--primario);
     color: var(--blanco);
