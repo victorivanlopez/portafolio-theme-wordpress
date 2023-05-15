@@ -10,15 +10,11 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: portafolio
 */
 
-/* @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@400;500;700&family=Source+Sans+Pro:wght@400;700&display=swap'); */
-/* @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Poppins:wght@400;500;700&display=swap'); */
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@700;900&family=Poppins:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@700;900&family=Poppins:wght@400;500;600;700&display=swap');
 
 
 :root {
     /* FUENTES */
-    /* --fuente-principal: 'Source Sans Pro', sans-serif;
-    --fuente-headings:  'Dosis', sans-serif; */
     --fuente-principal: 'Poppins', sans-serif;
     --fuente-headings:  'Lato', sans-serif;
 
@@ -110,30 +106,23 @@ button:hover {
 .wpcf7-form .wpcf7-submit {
     padding: 1rem 2rem;
     text-align: center;
-    font-weight: 500;
+    font-weight: 600;
     text-transform: uppercase;
     border: none;
     border-radius: 1rem;
     margin: 1rem 0;
     display: inline-block;
 }
-.boton-primary {
-    background-color: var(--primario);
-    border: 1px solid var(--primario);
-    color: var(--blanco);
-    transition: background-color .3s ease-out, color .3s ease-out;
-}
-.boton-primary:hover {
-    background-color: transparent;
+.boton-primary, 
+.wpcf7-form .wpcf7-submit {
+    border: 2px solid var(--primario);
     color: var(--primario);
+    background: linear-gradient(to left, var(--primario) 50%, transparent 50%) no-repeat left / 200%;
+    transition: background-position .3s ease, color .3s ease;
 }
-.boton-primaryTransp {
-    border: 1px solid var(--primario);
-    color: var(--primario);
-    transition: background-color .3s ease-out, color .3s ease-out;
-}
-.boton-primaryTransp:hover {
-    background-color: var(--primario);
+.boton-primary:hover,
+.wpcf7-form .wpcf7-submit:hover {
+    background-position: right;
     color: var(--blanco);
 }
 .seccion-descripcion {
@@ -421,7 +410,7 @@ button:hover {
     margin: 0 0 1rem 0;
     background-color: transparent;
     color: var(--primario);
-    border: 1px solid var(--primario);
+    border: 2px solid var(--primario);
     transition: background-color .3s ease-out, color .3s ease-out;
 }
 .tabs button.actual {
@@ -520,7 +509,7 @@ button:hover {
     background-position: 0px 95%;
     background-repeat: no-repeat;
     padding: 0.4rem 0;
-    transition: background-size 0.4s;
+    transition: background-size 0.3s;
 }
 .card:hover .card-content h3 a {
     background-size: 100% 0.2rem;
@@ -622,22 +611,14 @@ button:hover {
     border: 1px solid var(--gris-oscuro);
 }
 .wpcf7-form .wpcf7-submit {
-    /* padding: 1rem 3rem; */
-    background-color: var(--primario);
-    border: 1px solid var(--primario);
-    color: var(--blanco);
-    transition: background-color .3s ease-out, color .3s ease-out;
+    cursor: pointer;
     width: 100%;
+    border: 2px solid var(--primario);
 }
 @media (min-width: 768px) {
     .wpcf7-form .wpcf7-submit {
         width: 50%;
     }
-}
-.wpcf7-form .wpcf7-submit:hover {
-    color: var(--primario);
-    background-color: var(--blanco);
-    cursor: pointer;
 }
 .wpcf7-form .wpcf7-not-valid-tip {
     display: block;

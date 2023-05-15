@@ -4,7 +4,7 @@
                 <p>Hola. Mi nombre es <?php the_field('nombre'); ?></p>
                 <h1>Desarrollador Web <span id="element"></span></h1>
                 <div class="hero-action smooth">
-                    <a class="boton boton-primaryTransp" href="#portafolio">Ver Portafolio</a>
+                    <a class="boton boton-primary" href="#portafolio">Ver Portafolio</a>
                 </div>
             </div>
             <div class="smooth">

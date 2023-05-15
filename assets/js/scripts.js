@@ -1,30 +1,42 @@
 let tab = 1;
 
 document.addEventListener('DOMContentLoaded', () => {
-    sectionScroll();
+    scrollSpy();
     menuBurger();
     typedHeading();
-    mostrarSeccion();
+    mostrarSeccionTab();
     tabs();
-
-    const enlaceInicio = document.querySelector('.menu-principal a');
-    enlaceInicio.classList.add('active');
 });
 
-function sectionScroll() {
-    const sections = document.querySelectorAll('.scroll');
+function scrollSpy() {
+    const secciones = document.querySelectorAll('.scroll');
     const enlaces = document.querySelectorAll('.menu-principal a');
 
-    window.addEventListener('scroll', () => {
-        sections.forEach( (section, index) => {
-            const rect = section.getBoundingClientRect();
-            if (rect.top < 400) {
+    const options = {
+        rootMargin: '0px',
+        threshold: 0.5
+    }
+    
+
+    const observer = new IntersectionObserver((entries, observer) =>{
+        entries.forEach((entry) => {
+            if(entry.isIntersecting) {
+                const idObserver = `#${entry.target.id}`;
+                
                 enlaces.forEach(enlace => {
+                    const idEnlace = enlace.attributes.href.value;
                     enlace.classList.remove('active');
+                    
+                    if(idEnlace === idObserver) {
+                        enlace.classList.add('active');
+                    };
                 });
-                enlaces[index].classList.add('active');
             };
         });
+    }, options);
+
+    secciones.forEach((seccion) => {
+        observer.observe(seccion);
     });
 };
 
@@ -57,12 +69,12 @@ function tabs() {
     botones.forEach(boton => {
         boton.addEventListener('click', e => {
             tab = parseInt(e.target.dataset.tab);
-            mostrarSeccion();
+            mostrarSeccionTab();
         });
     });
 };
 
-function mostrarSeccion() {
+function mostrarSeccionTab() {
     const seccion = document.querySelector(`#tab-${tab}`);
     const seccionAnterior = document.querySelector('.mostrar');
 
