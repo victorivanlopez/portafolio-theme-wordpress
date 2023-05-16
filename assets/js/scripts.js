@@ -12,18 +12,12 @@ function scrollSpy() {
     const secciones = document.querySelectorAll('.scroll');
     const enlaces = document.querySelectorAll('.menu-principal a');
 
-    const options = {
-        rootMargin: '0px',
-        threshold: 0.5
-    }
-    
-
-    const observer = new IntersectionObserver((entries, observer) =>{
+    const callback = (entries) => {
         entries.forEach((entry) => {
             if(entry.isIntersecting) {
                 const idObserver = `#${entry.target.id}`;
                 
-                enlaces.forEach(enlace => {
+                enlaces.forEach((enlace) => {
                     const idEnlace = enlace.attributes.href.value;
                     enlace.classList.remove('active');
                     
@@ -33,11 +27,14 @@ function scrollSpy() {
                 });
             };
         });
-    }, options);
-
-    secciones.forEach((seccion) => {
-        observer.observe(seccion);
+    };
+    
+    const observer = new IntersectionObserver(callback, {
+        rootMargin: '0px',
+        threshold: 0.5
     });
+
+    secciones.forEach((seccion) => observer.observe(seccion));
 };
 
 function menuBurger() {
