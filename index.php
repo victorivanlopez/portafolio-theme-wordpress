@@ -1,12 +1,6 @@
 <?php get_header(); ?>
     <main class="main contenedor seccion">
-        <?php
-            // Loop
-            while( have_posts() ) : the_post();
-                the_title();
-                the_content();
-            endwhile;
-        ?>
+        <?php get_template_part('template-parts/pagina'); ?>
     </main>
 
  <?php get_footer(); ?>

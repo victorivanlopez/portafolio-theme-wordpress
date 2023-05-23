@@ -175,6 +175,10 @@
                     </div>
                 <?php endif; ?>
             </div>
+
+            <div class="contenedor-boton">
+                <a class="boton boton-primary" href="#">Descargar mi CV</a>
+            </div>
         </section>
 
         <main id="portafolio" class="portafolio contenedor seccion scroll">
@@ -201,7 +205,7 @@
             wp_reset_postdata(); ?>
 
             <div class="contenedor-boton">
-                <a class="boton boton-primary" href="#">Todos los Proyectos</a>
+                <a class="boton boton-primary" href="<?php echo esc_url(get_permalink(get_page_by_title('Portafolio'))); ?>">Todos los Proyectos</a>
             </div>
         </main>
 
@@ -229,7 +233,7 @@
                 wp_reset_postdata(); ?>
 
             <div class="contenedor-boton">
-                <a class="boton boton-primary" href="#">Todas las Entradas</a>
+                <a class="boton boton-primary" href="<?php echo esc_url(get_permalink(get_page_by_title('Blog'))); ?>">Todas las Entradas</a>
             </div>
         </section>
 

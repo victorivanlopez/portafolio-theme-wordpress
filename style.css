@@ -129,6 +129,21 @@ button:hover {
     text-align: center;
     margin-bottom: 5rem;
 }
+.contenedor-boton {
+    margin: 2rem 0 0 0;
+}
+.contenedor-boton .boton {
+    width: 100%;
+}
+@media (min-width: 768px) {
+    .contenedor-boton {
+        display: flex;
+        justify-content: end;
+    }
+    .contenedor-boton .boton {
+        width: auto;
+    }
+}
 /* HEADER */
 @media (min-width: 993px) {
     .header {
@@ -225,17 +240,18 @@ button:hover {
         font-size: 1.8rem;
     }
 }
-.menu-principal a:hover {
+.menu-principal a:hover,
+.menu-principal-site a:hover {
     color: var(--primario);
 }
 .menu-principal a.active {
     color: var(--primario);
 }
-.navegacion .redes-menu {
+.redes-menu {
     display: none;
 }
 @media (min-width: 993px) {
-    .navegacion .redes-menu {
+    .redes-menu {
         display: flex;
     }
 }
@@ -567,21 +583,7 @@ button:hover {
 .card:hover .card-footer i {
     color: var(--primario);
 }
-.contenedor-boton {
-    margin: 2rem 0 0 0;
-}
-.contenedor-boton .boton {
-    width: 100%;
-}
-@media (min-width: 768px) {
-    .contenedor-boton {
-        display: flex;
-        justify-content: end;
-    }
-    .contenedor-boton .boton {
-        width: auto;
-    }
-}
+
 /* CONTACTO */
 .contacto h3 {
     margin-bottom: 3rem;
