@@ -146,7 +146,7 @@ button:hover {
 }
 /* HEADER */
 @media (min-width: 993px) {
-    .header {
+    .header-fixed {
         position: fixed;
         z-index: 1;
         background-color: var(--blanco);
@@ -156,6 +156,15 @@ button:hover {
         box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     }
 }
+
+@media (min-width: 768px) {
+    .header-secundary {
+        padding: 2rem;
+        width: min(90%, 105rem);
+        margin: 0 auto;
+    }
+}
+
 .navegacion {
     display: flex;
     flex-direction: row;
@@ -170,6 +179,10 @@ button:hover {
         justify-content: space-around;
         gap: 2rem;
         height: 100%;
+    }
+    .header-secundary .navegacion {
+        flex-direction: row;
+        justify-content: space-between;
     }
 }
 .logo {
@@ -204,6 +217,11 @@ button:hover {
         font-size: 1.6rem;
         font-weight: 400;
     }
+    .header-secundary .logo .nombre {
+        margin-top: 0;
+        font-size: 2rem;
+        font-weight: 700;
+    }
 }
 @media (min-width: 993px) {
     .hamburguer-menu {
@@ -221,7 +239,7 @@ button:hover {
         display: block;
     }
 }
-.menu-principal ul{
+.menu ul{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -229,29 +247,36 @@ button:hover {
     gap: 1.5rem;
     text-align: center;
 }
-.menu-principal a {
+@media (min-width: 768px) {
+    .menu-secundary ul {
+        flex-direction: row;
+    }
+}
+.menu a {
     color: var(--gris-oscuro);
     text-transform: uppercase;
     transition: color .3s;
     font-size: 2rem;
 }
 @media (min-width: 768px) {
-    .menu-principal a {
+    .menu a {
         font-size: 1.8rem;
     }
 }
-.menu-principal a:hover,
-.menu-principal-site a:hover {
+.menu a:hover{
     color: var(--primario);
 }
-.menu-principal a.active {
+.menu a.active {
     color: var(--primario);
 }
-.redes-menu {
+.current_page_item a {
+    color: var(--primario);
+}
+.header .redes-menu {
     display: none;
 }
 @media (min-width: 993px) {
-    .redes-menu {
+    .header .redes-menu {
         display: flex;
     }
 }
@@ -341,6 +366,7 @@ button:hover {
 }
 .hero-content h1 {
     margin: 1rem 0;
+    font-size: 3rem;
 }
 @media (min-width: 768px) {
     .hero-content h1 {
@@ -490,6 +516,10 @@ button:hover {
     margin: 0;
 }
 /* PORTAFOLIO */
+.portafolio h1,
+.blog h1 {
+    margin: 0 0 2rem 0;
+}
 .listado-cards {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(min(100%, 30rem), 1fr));

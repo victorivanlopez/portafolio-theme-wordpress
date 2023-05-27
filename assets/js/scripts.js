@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 function scrollSpy() {
     const secciones = document.querySelectorAll('.scroll');
-    const enlaces = document.querySelectorAll('.menu-principal a');
+    const enlaces = document.querySelectorAll('.menu a');
 
     const callback = (entries) => {
         entries.forEach((entry) => {
