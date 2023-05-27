@@ -1,10 +1,10 @@
 <?php get_header(); ?>
         <section id="inicio" class="hero scroll">
             <div class="hero-content">
-                <p>Hola. Mi nombre es Víctor Iván López González</p>
+                <p>Hola. Mi nombre es <?php the_field('nombre'); ?></p>
                 <h1>Desarrollador Web <span id="element"></span></h1>
                 <div class="hero-action smooth">
-                    <a class="boton boton-primaryTransp" href="#portafolio">Ver Portafolio</a>
+                    <a class="boton boton-primary" href="#portafolio">Ver Portafolio</a>
                 </div>
             </div>
             <div class="smooth">
@@ -20,25 +20,24 @@
 
             <div class="sobre-mi-content">
                 <div class="resumen">
-                    <h3>Hola. Soy <span>Víctor Iván López</span></h3>
-                    <p>Me gradué de la carrera de Ingeniería en Telemática en la Universidad de Colima en el año 2017. Al inicio de mi carrera laboral, me dediqué a temas relacionados con la tecnología, las redes y la comunicación de datos. Siempre he sentido una gran pasión por la programación web, y he fortalecido mis conocimientos de manera autodidacta en programación y diseño web.
-                    <p>Actualmente, disfruto trabajar en el desarrollo de páginas web para emprendedores que buscan mejorar su negocio y ofrecer sus servicios o productos de manera más profesional a sus clientes.</p>
+                    <h3>Hola. Soy <span><?php the_field('nombre'); ?></span></h3>
+                    <?php the_field('resumen'); ?>
                 </div>
 
                 <div class="biografia">
                     <h3>Información Adicional</h3>
                     <ul class="biografia-listado">
                         <li>
-                            <p><span>Nombre:</span> Víctor Iván López González</p>
+                            <p><span>Nombre:</span> <?php the_field('nombre_completo') ?></p>
                         </li>
                         <li>
-                            <p><span>Puesto:</span> Desarrollador Front-end</p>
+                            <p><span>Puesto:</span> <?php the_field('profesion') ?></p>
                         </li>
                         <li>
-                            <p><span>Edad:</span> 28 Años</p>
+                            <p><span>Edad:</span> <?php the_field('edad') ?> Años</p>
                         </li>
                         <li>
-                            <p><span>País:</span> México</p>
+                            <p><span>País:</span> <?php the_field('pais') ?></p>
                         </li>
                     </ul>
                 </div>
@@ -54,229 +53,187 @@
             </div>
 
             <div id="tab-1" class="experiencias">
-                <div class="experiencia">
-                    <p class="periodo">2018-2020</p>
-                    <h3 class="nombre">Coorninador de Informática</h3>
-                    <p class="empresa">ASIPONA</p>
-                    <p class="descripcion">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis autem minima velit quibusdam vero.</p>
-                </div>
+                <?php $experiencia_1 = get_field('experiencia_1');
+                if(validarValues($experiencia_1)) :?>
+                    <div class="experiencia">
+                        <?php      
+                            $fecha_inicio = $experiencia_1['inicio'];
+                            $fecha_fin = $experiencia_1['fin'];
+                            $empresa = $experiencia_1['empresa'];
+                            $cargo = $experiencia_1['cargo'];
+                            $descripcion = $experiencia_1['descripcion']; 
+                        ?>
 
-                <div class="experiencia">
-                    <p class="periodo">2018-2020</p>
-                    <h3 class="nombre">Coorninador de Informática</h3>
-                    <p class="empresa">ASIPONA</p>
-                    <p class="descripcion">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis autem minima velit quibusdam vero.</p>
-                </div>
+                        <p class="periodo"><?php echo esc_html($fecha_inicio); ?>-<?php  echo esc_html($fecha_fin); ?></p>
+                        <h3 class="nombre"><?php echo esc_html($cargo); ?></h3>
+                        <p class="empresa"><?php echo esc_html($empresa); ?></p>
+                        <p class="descripcion"><?php echo esc_html($descripcion); ?></p>
+                    </div>
+                <?php endif; ?>
 
-                <div class="experiencia">
-                    <p class="periodo">2018-2020</p>
-                    <h3 class="nombre">Coorninador de Informática</h3>
-                    <p class="empresa">ASIPONA</p>
-                    <p class="descripcion">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis autem minima velit quibusdam vero.</p>
-                </div>
+                <?php $experiencia_2 = get_field('experiencia_2'); 
+                if(validarValues($experiencia_2)) :?>
+                    <div class="experiencia">
+                        <?php      
+                            $fecha_inicio = $experiencia_2['inicio'];
+                            $fecha_fin = $experiencia_2['fin'];
+                            $empresa = $experiencia_2['empresa'];
+                            $cargo = $experiencia_2['cargo'];
+                            $descripcion = $experiencia_2['descripcion']; 
+                        ?>
 
-                <div class="experiencia">
-                    <p class="periodo">2018-2020</p>
-                    <h3 class="nombre">Coorninador de Informática</h3>
-                    <p class="empresa">ASIPONA</p>
-                    <p class="descripcion">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis autem minima velit quibusdam vero.</p>
-                </div>
+                        <p class="periodo"><?php echo esc_html($fecha_inicio); ?>-<?php  echo esc_html($fecha_fin); ?></p>
+                        <h3 class="nombre"><?php echo esc_html($cargo); ?></h3>
+                        <p class="empresa"><?php echo esc_html($empresa); ?></p>
+                        <p class="descripcion"><?php echo esc_html($descripcion); ?></p>
+                    </div>
+                <?php endif; ?>
+
+                <?php $experiencia_3 = get_field('experiencia_3');
+                if(validarValues($experiencia_3)) :?>
+                    <div class="experiencia">
+                        <?php      
+                            $fecha_inicio = $experiencia_3['inicio'];
+                            $fecha_fin = $experiencia_3['fin'];
+                            $empresa = $experiencia_3['empresa'];
+                            $cargo = $experiencia_3['cargo'];
+                            $descripcion = $experiencia_3['descripcion']; 
+                        ?>
+
+                        <p class="periodo"><?php echo esc_html($fecha_inicio); ?>-<?php  echo esc_html($fecha_fin); ?></p>
+                        <h3 class="nombre"><?php echo esc_html($cargo); ?></h3>
+                        <p class="empresa"><?php echo esc_html($empresa); ?></p>
+                        <p class="descripcion"><?php echo esc_html($descripcion); ?></p>
+                    </div>
+                <?php endif; ?>
+
+                <?php $experiencia_4 = get_field('experiencia_4');
+                if(validarValues($experiencia_4)) :?>
+                    <div class="experiencia">
+                        <?php      
+                            $fecha_inicio = $experiencia_4['inicio'];
+                            $fecha_fin = $experiencia_4['fin'];
+                            $empresa = $experiencia_4['empresa'];
+                            $cargo = $experiencia_4['cargo'];
+                            $descripcion = $experiencia_4['descripcion']; 
+                        ?>
+
+                        <p class="periodo"><?php echo esc_html($fecha_inicio); ?>-<?php  echo esc_html($fecha_fin); ?></p>
+                        <h3 class="nombre"><?php echo esc_html($cargo); ?></h3>
+                        <p class="empresa"><?php echo esc_html($empresa); ?></p>
+                        <p class="descripcion"><?php echo esc_html($descripcion); ?></p>
+                    </div>
+                <?php endif; ?>
             </div>
 
             <div id="tab-2" class="habilidades">
-                <div class="habilidad">
-                    <i class="fa-brands fa-figma"></i>
-                    <h3 class="nombre">Maquetación y Diseño</h3>
-                </div>
-                <div class="habilidad">
-                    <i class="fa-brands fa-react"></i>
-                    <h3 class="nombre">Desarrollo con React</h3>
-                </div>
-                <div class="habilidad">
-                    <i class="fa-solid fa-database"></i>
-                    <h3 class="nombre">Manejo de Bases de Datos</h3>
-                </div>
-                <div class="habilidad">
-                    <i class="fa-solid fa-code-branch"></i>
-                    <h3 class="nombre">Uso de Git y GitHub</h3>
-                </div>
+            <?php $habilidad_1 = get_field('habilidad_1');
+                if(validarValues($habilidad_1)) :?>
+                    <div class="habilidad">
+                        <?php      
+                            $nombre = $habilidad_1['nombre'];
+                            $icono = $habilidad_1['icono'];
+                        ?>
+                        <i class="<?php echo esc_attr($icono); ?>"></i>
+                        <h3 class="nombre"><?php echo esc_html($nombre); ?></h3>
+                    </div>
+                <?php endif; ?>
+
+                <?php $habilidad_2 = get_field('habilidad_2');
+                if(validarValues($habilidad_2)) :?>
+                    <div class="habilidad">
+                        <?php      
+                            $nombre = $habilidad_2['nombre'];
+                            $icono = $habilidad_2['icono'];
+                        ?>
+                        <i class="<?php echo esc_attr($icono); ?>"></i>
+                        <h3 class="nombre"><?php echo esc_html($nombre); ?></h3>
+                    </div>
+                <?php endif; ?>
+
+                <?php $habilidad_3 = get_field('habilidad_3');
+                if(validarValues($habilidad_3)) :?>
+                    <div class="habilidad">
+                        <?php      
+                            $nombre = $habilidad_3['nombre'];
+                            $icono = $habilidad_3['icono'];
+                        ?>
+                        <i class="<?php echo esc_attr($icono); ?>"></i>
+                        <h3 class="nombre"><?php echo esc_html($nombre); ?></h3>
+                    </div>
+                <?php endif; ?>
+
+                <?php $habilidad_4 = get_field('habilidad_4');
+                if(validarValues($habilidad_4)) :?>
+                    <div class="habilidad">
+                        <?php      
+                            $nombre = $habilidad_4['nombre'];
+                            $icono = $habilidad_4['icono'];
+                        ?>
+                        <i class="<?php echo esc_attr($icono); ?>"></i>
+                        <h3 class="nombre"><?php echo esc_html($nombre); ?></h3>
+                    </div>
+                <?php endif; ?>
+            </div>
+
+            <div class="contenedor-boton">
+                <a class="boton boton-primary" href="#">Descargar mi CV</a>
             </div>
         </section>
 
         <main id="portafolio" class="portafolio contenedor seccion scroll">
             <h2>Portafolio</h2>
             <p class="seccion-descripcion">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <?php 
+                $args = array(
+                    'post_type' => 'proyecto',
+                    'posts_per_page' => 3
+                );
 
-            <div class="listado-cards">
-                <div class="card">
-                    <div class="card-imagen">
-                        <a href="#">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/proyecto1.png" alt="Proyecto">
-                        </a>           
-                    </div>
-
-                    <div class="card-content">
-                        <h3><a href="#">MuebleWorld</a></h3>
-                        <div class="card-botones">
-                            <a class="boton" href="#">Más Detalles</a>
-                            <a class="boton" href="#">Ver Repositorio</a>
-                        </div>
-                    </div>
-
-                    <div class="card-footer">
-                        <ul class="listado-meta">
-                            <li class="meta">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-sass.png" alt="Icono Técnologia">
-                            </li>
-                            <li class="meta">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-js.png" alt="Icono Técnologia">
-                            </li>
-                            <li class="meta">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-php.png" alt="Icono Técnologia">
-                            </li>
-                            <li class="meta">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-mysql.png" alt="Icono Técnologia">
-                            </li>
-                        </ul>
-                    </div>
+                $proyectos = new WP_Query($args);
+            
+            if($proyectos->have_posts()) : ?>
+                <div class="listado-cards">
+                    <?php while ( $proyectos->have_posts() ) :
+                        $proyectos->the_post();
+                        get_template_part('template-parts/proyecto');
+                    endwhile; ?>
                 </div>
+            <?php else : ?>
+                <p class="seccion-descripcion">Sin proyectos. Por favor agrega algún proyecto.</p>
+            <?php endif;
+            wp_reset_postdata(); ?>
 
-                <div class="card">
-                    <div class="card-imagen">
-                        <a href="#">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/proyecto2.png" alt="Proyecto">
-                        </a>           
-                    </div>
-
-                    <div class="card-content">
-                        <h3><a href="#">Meeti</a></h3>
-                        <div class="card-botones">
-                            <a class="boton" href="#">Más Detalles</a>
-                            <a class="boton" href="#">Ver Repositorio</a>
-                        </div>
-                    </div>
-
-                    <div class="card-footer">
-                        <ul class="listado-meta">
-                            <li class="meta">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-mongodb.png" alt="Icono Técnologia">
-                            </li>
-                            <li class="meta">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-express.png" alt="Icono Técnologia">
-                            </li>
-                            <li class="meta">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-react.png" alt="Icono Técnologia">
-                            </li>
-                            <li class="meta">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-nodejs.png" alt="Icono Técnologia">
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div class="card-imagen">
-                        <a href="#">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/proyecto3.png" alt="Proyecto">
-                        </a>           
-                    </div>
-
-                    <div class="card-content">
-                        <h3><a href="#">GuitarLA</a></h3>
-                        <div class="card-botones">
-                            <a class="boton" href="#">Más Detalles</a>
-                            <a class="boton" href="#">Ver Repositorio</a>
-                        </div>
-                    </div>
-
-                    <div class="card-footer">
-                        <ul class="listado-meta">
-                            <li class="meta">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-mongodb.png" alt="Icono Técnologia">
-                            </li>
-                            <li class="meta">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-express.png" alt="Icono Técnologia">
-                            </li>
-                            <li class="meta">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-react.png" alt="Icono Técnologia">
-                            </li>
-                            <li class="meta">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-nodejs.png" alt="Icono Técnologia">
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+            <div class="contenedor-boton">
+                <a class="boton boton-primary" href="<?php echo esc_url(get_permalink(get_page_by_title('Portafolio'))); ?>">Todos los Proyectos</a>
             </div>
         </main>
 
         <section id="blog" class="blog contenedor seccion scroll">
             <h2>Blog</h2>
             <p class="seccion-descripcion">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-            
-            <div class="listado-cards">
-                <div class="card">
-                    <div class="card-imagen">
-                        <a href="#">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/entrada1.png" alt="Entrada">
-                        </a>           
-                    </div>
+            <?php 
+                $args = array(
+                    'post_type' => 'post',
+                    'posts_per_page' => 3
+                );
 
-                    <div class="card-content">
-                        <p class="categoria"><a href="#">Desarrollo Web</a></p>
-                        <h3><a href="#">Lo que debes saber sobre una tienda virtual</a></h3>
-                    </div>
+                $blog = new WP_Query($args);
+                
+                if($blog->have_posts()) : ?>
+                    <div class="listado-cards">
+                        <?php while ( $blog->have_posts() ) :
+                            $blog->the_post();
+                            get_template_part('template-parts/blog');
+                        endwhile; ?>
+                     </div>
+                <?php else : ?>
+                    <p class="seccion-descripcion">Sin entradas. Por favor agrega una entrada.</p>
+                <?php endif;
+                wp_reset_postdata(); ?>
 
-                    <div class="card-footer">
-                        <ul class="listado-meta">
-                            <li class="meta meta-blog">
-                                <i class="fa-solid fa-calendar-days"></i>
-                                <p>03 de Mayo de 2023</p>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-imagen">
-                        <a href="#">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/entrada2.png" alt="Entrada">
-                        </a>           
-                    </div>
-
-                    <div class="card-content">
-                        <p class="categoria"><a href="#">Desarrollo Web</a></p>
-                        <h3><a href="#">6 Ventajas de invertir en una pagina web</a></h3>
-                    </div>
-
-                    <div class="card-footer">
-                        <ul class="listado-meta">
-                            <li class="meta meta-blog">
-                                <i class="fa-solid fa-calendar-days"></i>
-                                <p>05 de Mayo de 2023</p>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-imagen">
-                        <a href="#">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/entrada3.png" alt="Entrada">
-                        </a>           
-                    </div>
-
-                    <div class="card-content">
-                        <p class="categoria"><a href="#">Desarrollo Web</a></p>
-                        <h3><a href="#">Beneficios al realizar un mantenimiento web</a></h3>
-                    </div>
-
-                    <div class="card-footer">
-                        <ul class="listado-meta">
-                            <li class="meta meta-blog">
-                                <i class="fa-solid fa-calendar-days"></i>
-                                <p>07 de Mayo de 2023</p>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+            <div class="contenedor-boton">
+                <a class="boton boton-primary" href="<?php echo esc_url(get_permalink(get_page_by_title('Blog'))); ?>">Todas las Entradas</a>
             </div>
         </section>
 
@@ -299,7 +256,7 @@
                             </div>
                             <div class="contenido">
                                 <p class="titulo">Telefono</p>
-                                <a href="tel:+3143767156">(314)3767-156</a>
+                                <a href="tel:+<?php the_field('telefono'); ?>"><?php the_field('telefono'); ?></a>
                             </div>
                         </div>
 
@@ -309,7 +266,7 @@
                             </div>
                             <div class="contenido">
                                 <p class="titulo">Email</p>
-                                <a href="mailto:victor_ivan2211@hotmail.com">victor_ivan2211@hotmail.com</a>
+                                <a href="mailto:<?php the_field('email'); ?>"><?php the_field('email'); ?></a>
                             </div>
                         </div>
 
@@ -319,18 +276,13 @@
                             </div>
                             <div class="contenido">
                                 <p class="titulo">Ubicación</p>
-                                <p>Manzanillo, Colima, México</p>
+                                <p><?php the_field('ubicacion'); ?></p>
                             </div>
                         </div>
                     </div>
                     <h3>Redes Sociales</h3>
                     <nav class="redes-menu">
-                        <a href="https://mx.linkedin.com/" target="_blank">
-                            <i class="fa-brands fa-linkedin"></i>
-                        </a>
-                        <a href="https://github.com/" target="_blank">
-                            <i class="fa-brands fa-github"></i>
-                        </a>
+                        <?php get_template_part('template-parts/redes-menu'); ?>
                     </nav>
                 </div>
             </div>

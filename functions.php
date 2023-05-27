@@ -1,4 +1,13 @@
 <?php
+// FUNCIONES PERSONALIZADAS
+require_once get_template_directory() . '/inc/funciones.php';
+
+function mi_portafolio_setup() {
+    add_theme_support('post-thumbnails');
+    add_theme_support('title-tag');
+};
+add_action('after_setup_theme', 'mi_portafolio_setup');
+
 function mi_portafolio_menus() {
     register_nav_menus( array(
         'menu-principal' => __('Menu Principal', 'mi-portafolio'), 

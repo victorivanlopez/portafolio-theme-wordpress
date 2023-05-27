@@ -8,13 +8,10 @@
     <?php wp_head(); ?>
 </head>
 <body>
-    <header class="header header-fixed">
+    <header class="header header-secundary">
         <div class="navegacion">
             <div class="logo">
                 <a href="<?php echo get_home_url(); ?>">
-                    <div class="foto">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/foto.png" alt="Fotografia">
-                    </div>
                     <p class="nombre">Víctor Iván López</p>
                 </a>
             </div>
@@ -31,9 +28,9 @@
             <div class="contenedor-menu">
                 <?php
                     $args = array(
-                        'theme_location' => 'menu-principal',
+                        'theme_location' => 'menu-secundario',
                         'container' => 'nav',
-                        'container_class' => 'menu smooth'
+                        'container_class' => 'menu menu-secundary smooth'
                     );
                     wp_nav_menu($args);
                 ?>
@@ -50,9 +47,9 @@
     <div id="menuMovil" class="navegacion-movil">
         <?php
             $args = array(
-                'theme_location' => 'menu-principal',
+                'theme_location' => 'menu-secundario',
                 'container' => 'nav',
-                'container_class' => 'menu smooth'
+                'container_class' => 'menu menu-secundary smooth'
             );
             wp_nav_menu($args);
         ?>
@@ -62,4 +59,4 @@
         </nav>
     </div>
     
-    <div class="main-content">
+    <!-- <div class="main-content"> -->

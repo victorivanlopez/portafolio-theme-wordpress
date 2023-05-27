@@ -1,31 +1,40 @@
 let tab = 1;
 
 document.addEventListener('DOMContentLoaded', () => {
-    sectionScroll();
+    scrollSpy();
     menuBurger();
     typedHeading();
-    mostrarSeccion();
+    mostrarSeccionTab();
     tabs();
-
-    const enlaceInicio = document.querySelector('.menu-principal a');
-    enlaceInicio.classList.add('active');
 });
 
-function sectionScroll() {
-    const sections = document.querySelectorAll('.scroll');
-    const enlaces = document.querySelectorAll('.menu-principal a');
+function scrollSpy() {
+    const secciones = document.querySelectorAll('.scroll');
+    const enlaces = document.querySelectorAll('.menu a');
 
-    window.addEventListener('scroll', () => {
-        sections.forEach( (section, index) => {
-            const rect = section.getBoundingClientRect();
-            if (rect.top < 400) {
-                enlaces.forEach(enlace => {
+    const callback = (entries) => {
+        entries.forEach((entry) => {
+            if(entry.isIntersecting) {
+                const idObserver = `#${entry.target.id}`;
+                
+                enlaces.forEach((enlace) => {
+                    const idEnlace = enlace.attributes.href.value;
                     enlace.classList.remove('active');
+                    
+                    if(idEnlace === idObserver) {
+                        enlace.classList.add('active');
+                    };
                 });
-                enlaces[index].classList.add('active');
             };
         });
+    };
+    
+    const observer = new IntersectionObserver(callback, {
+        rootMargin: '0px',
+        threshold: 0.5
     });
+
+    secciones.forEach((seccion) => observer.observe(seccion));
 };
 
 function menuBurger() {
@@ -57,12 +66,12 @@ function tabs() {
     botones.forEach(boton => {
         boton.addEventListener('click', e => {
             tab = parseInt(e.target.dataset.tab);
-            mostrarSeccion();
+            mostrarSeccionTab();
         });
     });
 };
 
-function mostrarSeccion() {
+function mostrarSeccionTab() {
     const seccion = document.querySelector(`#tab-${tab}`);
     const seccionAnterior = document.querySelector('.mostrar');
 
