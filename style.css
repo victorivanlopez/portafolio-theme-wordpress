@@ -162,6 +162,7 @@ button:hover {
         padding: 2rem;
         width: min(90%, 105rem);
         margin: 0 auto;
+        border-bottom: 1px solid var(--gris-claro);
     }
 }
 
