@@ -209,6 +209,34 @@
             </div>
         </main>
 
+        <section id="blog" class="blog contenedor seccion scroll">
+            <h2>Blog</h2>
+            <p class="seccion-descripcion">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <?php 
+                $args = array(
+                    'post_type' => 'post',
+                    'posts_per_page' => 3
+                );
+
+                $blog = new WP_Query($args);
+                
+                if($blog->have_posts()) : ?>
+                    <div class="listado-cards">
+                        <?php while ( $blog->have_posts() ) :
+                            $blog->the_post();
+                            get_template_part('template-parts/blog');
+                        endwhile; ?>
+                     </div>
+                <?php else : ?>
+                    <p class="seccion-descripcion">Sin entradas. Por favor agrega una entrada.</p>
+                <?php endif;
+                wp_reset_postdata(); ?>
+
+            <div class="contenedor-boton">
+                <a class="boton boton-primary" href="<?php echo esc_url(get_permalink(get_page_by_title('Blog'))); ?>">Todas las Entradas</a>
+            </div>
+        </section>
+
         <section id="contacto" class="contacto contenedor seccion scroll">
             <h2>Contacto</h2>
             <p class="seccion-descripcion">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
