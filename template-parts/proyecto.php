@@ -8,7 +8,7 @@
     <div class="card-content">
         <h3><a href="<?php the_permalink() ?>"><?php the_title() ?></a></h3>
         <div class="card-botones">
-            <a class="boton" href="<?php the_permalink() ?>">Más Detalles</a>
+            <a class="boton" href="#">Ver demo</a>
             <a class="boton" href="#">Ver Repositorio</a>
         </div>
     </div>

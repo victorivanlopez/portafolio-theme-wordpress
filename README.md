@@ -1,2 +1,5 @@
-# NOTAS
-Repositorio para mi portafolio. Desarrollado con WordPress.
+# THEME PORTAFOLIO
+
+### Screenshot
+
+![](./screenshot.jpeg)
