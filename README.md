@@ -1,5 +1,6 @@
 # THEME PORTAFOLIO
 
-### Screenshot
-
-![](./screenshot.jpeg)
+## Preview
+| **Home Page** |
+| :-------------: |
+| ![Home Page](https://i.imgur.com/ElBeq94.gif) |
