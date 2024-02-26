@@ -186,18 +186,15 @@ button:hover {
         justify-content: space-between;
     }
 }
-.logo {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
 .foto {
     display: none;
 }
 @media (min-width: 993px) {
     .foto {
-        display: block;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
 }
 .logo .foto img {

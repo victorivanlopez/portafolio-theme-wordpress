@@ -13,12 +13,10 @@
     <header class="header header-fixed">
         <div class="navegacion">
             <div class="logo">
-                <a href="<?php echo get_home_url(); ?>">
-                    <div class="foto">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/foto.png" alt="Fotografia">
-                    </div>
-                    <p class="nombre">Víctor Iván López</p>
-                </a>
+                <div class="foto">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/foto.png" alt="Fotografia">
+                </div>
+                <p class="nombre">Víctor Iván López</p>
             </div>
 
             <div class="hamburguer-menu">
