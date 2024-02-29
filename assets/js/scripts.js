@@ -51,6 +51,7 @@ function typedHeading() {
     if(element) {
         const typed = new Typed('#element', {
             strings: [
+                'WordPress',
                 'Front-end'
             ],
             typeSpeed: 100,
