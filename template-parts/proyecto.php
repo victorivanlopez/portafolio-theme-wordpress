@@ -1,12 +1,11 @@
 <div class="card">
     <div class="card-imagen">
-        <a href="<?php the_permalink() ?>">
-            <?php the_post_thumbnail('medium') ?>
-        </a>           
+        <?php the_post_thumbnail('medium') ?> 
     </div>
 
     <div class="card-content">
-        <h3><a href="<?php the_permalink() ?>"><?php the_title() ?></a></h3>
+        <h3><a href="#"><?php the_title() ?></a></h3>
+        <p><?php the_content() ?></p>
         <div class="card-botones">
             <a class="boton" href="#">Ver demo</a>
             <a class="boton" href="#">Ver Repositorio</a>
