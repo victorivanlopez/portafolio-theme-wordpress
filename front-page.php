@@ -4,7 +4,7 @@
         <p>Hola. Mi nombre es <?php the_field('nombre'); ?></p>
         <h1>Desarrollador Web <span id="element"></span></h1>
         <div class="hero-action smooth">
-            <a class="boton boton-primary" href="#portafolio">Ver Portafolio</a>
+            <a class="boton boton-primary" href="#portafolio">Ver Proyectos</a>
         </div>
     </div>
     <div class="smooth">
@@ -16,7 +16,7 @@
 
 <section id="sobre-mi" class="sobre-mi contenedor seccion scroll">
     <h2>Sobre mi</h2>
-    <p class="seccion-descripcion">Conoce un poco más sobre mi, habilidades y mi experiencia</p>
+    <p class="seccion-descripcion">Visión detallada de quién soy, mi trayectoria profesional e información adicional.</p>
 
     <div class="sobre-mi-content">
         <div class="resumen">
@@ -182,8 +182,8 @@
 </section>
 
 <main id="portafolio" class="portafolio contenedor seccion scroll">
-    <h2>Portafolio</h2>
-    <p class="seccion-descripcion">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+    <h2>Proyectos</h2>
+    <p class="seccion-descripcion">Explora mis proyectos más destacados de clientes.</p>
     <?php
     $args = array(
         'post_type' => 'proyecto',
@@ -200,18 +200,14 @@
             endwhile; ?>
         </div>
     <?php else : ?>
-        <p class="seccion-descripcion">Sin proyectos. Por favor agrega algún proyecto.</p>
+        <p class="seccion-descripcion">Aún no hay proyectos registrados.</p>
     <?php endif;
     wp_reset_postdata(); ?>
-
-    <div class="contenedor-boton">
-        <a class="boton boton-primary" href="<?php echo esc_url(get_permalink(get_page_by_title('Portafolio'))); ?>">Todos los Proyectos</a>
-    </div>
 </main>
 
 <section id="contacto" class="contacto contenedor seccion scroll">
     <h2>Contacto</h2>
-    <p class="seccion-descripcion">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+    <p class="seccion-descripcion">Encontrarás todas las formas de ponerte en contacto conmigo.</p>
 
     <div class="contacto-grid">
         <div class="formulario">
